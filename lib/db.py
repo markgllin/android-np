@@ -6,7 +6,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 global table_name
 
 def insert_dns_result(hostname):
-  conn = sqlite3.connect('db_addresses_2.db')
+  conn = sqlite3.connect('db_addresses.db')
   c = conn.cursor()
 
   try:
@@ -20,13 +20,13 @@ def insert_dns_result(hostname):
     return hostname
 
 
-conn = sqlite3.connect('db_addresses_2.db')
+conn = sqlite3.connect('db_addresses.db')
 c = conn.cursor()
 
-for directory in os.listdir('../lists_copy'):
+for directory in os.listdir('../lists'):
 
   #read directory
-  dir_category = os.path.join('../lists_copy', directory)
+  dir_category = os.path.join('../lists', directory)
   table_name = directory
 
   #create table
@@ -50,7 +50,7 @@ for directory in os.listdir('../lists_copy'):
 
 conn.close()
 
-f.open('unhandled_hosts_2.txt', 'a')
+f = open('unhandled_hosts.txt', 'a')
 for hostname in unhandled_hosts:
   f.write(hostname)
 f.close()
