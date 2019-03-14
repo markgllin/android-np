@@ -19,17 +19,20 @@ def categorize_address(frame):
   conn = sqlite3.connect('database/ip_addresses.db')
   c = conn.cursor()
 
-  c.execute("select * from ip_address where ip='" + extrnl_ip + "'")
+  c.execute("select * from ip_service where ip='" + extrnl_ip + "'")
   results = c.fetchall()
 
-  queried = []
+  service = ''
   for result in results:
-    queried.append((result[1], result[2]) + frame)
+    if service == '':
+      service = result[1]
+    else:
+      service += ',' + result[1]
 
-  if queried == []:
+  if service == '':
     return [(extrnl_ip, 'benign') + frame]
   
-  return queried
+  return [(extrnl_ip, service) + frame]
 
 
 
