@@ -62,7 +62,7 @@ for apk in os.listdir('apks/'):
 
   # start monkey on app
   print "\tStarting Monkey..."
-  os.system("adb shell monkey -s 601 --pct-syskeys 0 --throttle 1000 -p " + apk[:-4] + " 1750")
+  os.system("adb shell monkey -s 601 --throttle 1000 -p " + apk[:-4] + " 1750")
   print "\tDone Monkey-ing around :)"
 
   # sleep for 25 seconds after monkey is done
