@@ -47,34 +47,53 @@ interface = sys.argv[1]
 #   print("adb shell monkey -s 601 --pct-syskeys 0 --throttle 1000 -p " + apk[:-4] + " 10")
 
 for apk in os.listdir('apks/'):
-  print "Testing " + apk + "..."
+  print("Testing " + apk + "...")
 
   #install app
-  print "\tInstalling apk..."
-  os.system("adb install apks/" + apk)
+  # print("\tInstalling apk...")
+  # os.system("adb install apks/" + apk)
 
-  #start network capture interface
-  print "\tStarting tshark..."
-  tshark_process = subprocess.Popen("tshark -i " + interface + " -a duration:1800 -w pcaps/" + apk + ".pcap", shell=True)
+  # launch the app
+  os.system("adb shell monkey -s 601 -p " + apk[:-4] + " 1")
+  time.sleep(5) # wait 5 seconds after launch
 
-  # sleep for 25 seconds before starting app
-  time.sleep(25)
+  activity_names = subprocess.getoutput("adb shell am stack list")
+  activity_names = list(filter(None, activity_names.split('\n')))
+  activity_names = [line for line in activity_names if "taskId" in line]
+  
+  my_activity = [line for line in activity_names if apk[:-4] in line]
+  my_activity_id = my_activity[0].split("=")[1].split(":")[0]
+  
+  # lock the screen
+  os.system("adb shell am task lock " + str(my_activity_id))
 
-  # start monkey on app
-  print "\tStarting Monkey..."
-  os.system("adb shell monkey -s 601 --throttle 1000 -p " + apk[:-4] + " 1750")
-  print "\tDone Monkey-ing around :)"
+  os.system("adb shell monkey -s 601 -p " + apk[:-4] + " 5000")
 
-  # sleep for 25 seconds after monkey is done
-  time.sleep(25)
+  # #start network capture interface
+  # print "\tStarting tshark..."
+  # tshark_process = subprocess.Popen("tshark -i " + interface + " -a duration:900 -w pcaps/" + apk + ".pcap", shell=True)
 
-  # wait for tshark process to finish
-  print "\tChecking if tshark process exited..."
-  wait = True
-  while wait:
-    poll = tshark_process.poll()
-    if poll != None: wait = False
+  # # sleep for 10 seconds before starting app
+  # time.sleep(10)
+
+  # # start monkey on app
+  # print "\tStarting Monkey..."
+  # os.system("adb shell monkey -s 601 --throttle 100 -p " + apk[:-4] + " 3000")
+  # print "\tDone Monkey-ing around :)"
+
+  # # sleep for 10 seconds after monkey is done
+  # time.sleep(10)
+
+  # # wait for tshark process to finish
+  # print "\tChecking if tshark process exited..."
+  # wait = True
+  # while wait:
+  #   poll = tshark_process.poll()
+  #   if poll != None: wait = False
+
+  # unlock the screen
+  os.system("adb shell am task lock stop")  
 
   # uninstall package
-  print "\tUninstalling apk..."
-  os.system("adb uninstall " + apk[:-4])
+  # print("\tUninstalling apk...")
+  # os.system("adb uninstall " + apk[:-4])
