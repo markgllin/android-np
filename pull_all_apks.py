@@ -11,21 +11,19 @@ package_names = [i.split(':', 1)[1] for i in package_names]
 
 apk_path = "\"D:\School\CPSC 601\APKs"
 
-# pull all the packages
-for package in package_names:
-    print("------ " + package + " ------")
-    package_path = subprocess.getoutput("adb shell pm path " + package)
-    package_path = package_path.rstrip()
-    package_path = package_path[8:]
+# # pull all the packages
+# for package in package_names:
+#     print("------ " + package + " ------")
+#     package_path = subprocess.getoutput("adb shell pm path " + package)
+#     package_path = package_path.rstrip()
+#     package_path = package_path[8:]
 
     os.system("adb pull " + package_path + " " + apk_path + "\\" + package + ".apk\"")
 
 dont_uninstall = ["org.fdroid.fdroid", "org.thisisafactory.simiasque", 
                   "de.robv.android.xposed.installer"]
 to_uninstall = [x for x in package_names if x not in dont_uninstall]
-# to_uninstall = package_names
 
 # uninstall
 for package in to_uninstall:
-    print("------ " + package + " ------")
     os.system("adb uninstall " + package)
