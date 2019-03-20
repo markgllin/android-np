@@ -46,63 +46,56 @@ interface = sys.argv[1]
 #   print(apk)
 #   print("adb shell monkey -s 601 --pct-syskeys 0 --throttle 1000 -p " + apk[:-4] + " 10")
 
-# os.system("Start-Transcript -Path .\monkey_tests_results.txt")
-
-powerShellPath = r'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe'
-# p = subprocess.Popen([powerShellPath, "Start-Transcript -Path .\monkey_tests_results.txt"])
-
 sys.stdout = open('.\monkey_tests_results.txt', 'w')
 
 for apk in os.listdir('apks/'):
-  print("Testing " + apk + "...")
+	print("Testing " + apk + "...")
 
-  # install app
-  print("\tInstalling apk...")
-  os.system("adb install apks/" + apk)
+	# install app
+	print("\tInstalling apk...")
+	os.system("adb install apks/" + apk)
 
-  # launch the app
-  monkey_output = subprocess.getoutput("adb shell monkey -s 1234 -p " + apk[:-4] + " 1")
-  print(monkey_output)
+	# launch the app
+	monkey_output = subprocess.getoutput("adb shell monkey -s 1234 -p " + apk[:-4] + " 1")
+	print(monkey_output)
+	time.sleep(10)  # wait 10 seconds after launch to fully launch
 
-  time.sleep(10)  # wait 10 seconds after launch to fully launch
+	# lock the screen
+	activity_names = subprocess.getoutput("adb shell am stack list")
+	activity_names = activity_names.split('\n')
+	activity_names = [line for line in activity_names if "taskId" in line]
+	
+	my_activity = [line for line in activity_names if apk[:-4] in line]
+	my_activity_id = my_activity[0].split("=")[1].split(":")[0]
+	
+	os.system("adb shell am task lock " + str(my_activity_id))
 
-  # lock the screen
-  activity_names = subprocess.getoutput("adb shell am stack list")
-  activity_names = activity_names.split('\n')
-  activity_names = [line for line in activity_names if "taskId" in line]
-  
-  my_activity = [line for line in activity_names if apk[:-4] in line]
-  my_activity_id = my_activity[0].split("=")[1].split(":")[0]
-  
-  os.system("adb shell am task lock " + str(my_activity_id))
+	#start network capture interface
+	print("\tStarting tshark...")
+	tshark_process = subprocess.Popen("tshark -i " + interface + " -a duration:900 -w pcaps/" + apk + ".pcap", shell=True)
 
-  #start network capture interface
-  print("\tStarting tshark...")
-  tshark_process = subprocess.Popen("tshark -i " + interface + " -a duration:900 -w pcaps/" + apk + ".pcap", shell=True)
+	# sleep for 10 seconds before starting monkey
+	time.sleep(10)
 
-  # sleep for 10 seconds before starting monkey
-  time.sleep(10)
+	# start monkey on app
+	print("\tStarting Monkey...")
+	monkey_output = subprocess.getoutput("adb shell monkey -s 1234 --throttle 100 -p " + apk[:-4] + " 25000")
+	print(monkey_output)
+	print("\tDone Monkey-ing around :)")
 
-  # start monkey on app
-  print("\tStarting Monkey...")
-  monkey_output = subprocess.getoutput("adb shell monkey -s 1234 --throttle 100 -p " + apk[:-4] + " 25000")
-  print(monkey_output)
-  print("\tDone Monkey-ing around :)")
+	# sleep for 10 seconds after monkey is done
+	time.sleep(10)
 
-  # sleep for 10 seconds after monkey is done
-  time.sleep(10)
+	# wait for tshark process to finish
+	print("\tChecking if tshark process exited...")
+	wait = True
+	while wait:
+		poll = tshark_process.poll()
+		if poll != None: wait = False
 
-  # wait for tshark process to finish
-  print("\tChecking if tshark process exited...")
-  wait = True
-  while wait:
-    poll = tshark_process.poll()
-    if poll != None: wait = False
+	# unlock the screen
+	os.system("adb shell am task lock stop")  
 
-  # unlock the screen
-  os.system("adb shell am task lock stop")  
-
-  # uninstall package
-  print("\tUninstalling apk...")
-  os.system("adb uninstall " + apk[:-4])
-
+	# uninstall package
+	print("\tUninstalling apk...")
+	os.system("adb uninstall " + apk[:-4])
