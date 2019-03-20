@@ -46,16 +46,25 @@ interface = sys.argv[1]
 #   print(apk)
 #   print("adb shell monkey -s 601 --pct-syskeys 0 --throttle 1000 -p " + apk[:-4] + " 10")
 
+# os.system("Start-Transcript -Path .\monkey_tests_results.txt")
+
+powerShellPath = r'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe'
+# p = subprocess.Popen([powerShellPath, "Start-Transcript -Path .\monkey_tests_results.txt"])
+
+sys.stdout = open('.\monkey_tests_results.txt', 'w')
+
 for apk in os.listdir('apks/'):
-  print "Testing " + apk + "..."
+  print("Testing " + apk + "...")
 
   # install app
   print("\tInstalling apk...")
   os.system("adb install apks/" + apk)
 
   # launch the app
-  os.system("adb shell monkey -s 1234 -p " + apk[:-4] + " 1")
-  time.sleep(10) # wait 10 seconds after launch to fully launch
+  monkey_output = subprocess.getoutput("adb shell monkey -s 1234 -p " + apk[:-4] + " 1")
+  print(monkey_output)
+
+  time.sleep(10)  # wait 10 seconds after launch to fully launch
 
   # lock the screen
   activity_names = subprocess.getoutput("adb shell am stack list")
@@ -76,10 +85,8 @@ for apk in os.listdir('apks/'):
 
   # start monkey on app
   print("\tStarting Monkey...")
-  # pct-syskeys: ONLY VOLUME on Pixel - so, can be 0 here+
-  # --pct-syskeys 0 --pct-anyevent 0
-  os.system("adb shell monkey -s 1234 --throttle 100 -p " + apk[:-4] + " 25000")
-  # os.system("adb shell monkey -s 601 --throttle 100 -p " + apk[:-4] + " 3000")
+  monkey_output = subprocess.getoutput("adb shell monkey -s 1234 --throttle 100 -p " + apk[:-4] + " 25000")
+  print(monkey_output)
   print("\tDone Monkey-ing around :)")
 
   # sleep for 10 seconds after monkey is done
@@ -98,3 +105,4 @@ for apk in os.listdir('apks/'):
   # uninstall package
   print("\tUninstalling apk...")
   os.system("adb uninstall " + apk[:-4])
+

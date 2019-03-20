@@ -1,0 +1,143 @@
+Testing com.amanotes.beathopper.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.amanotes.beathopper
+  bash arg: 1
+args: [-s, 1234, -p, com.amanotes.beathopper, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.amanotes.beathopper"
+ arg: "1"
+data="1234"
+data="com.amanotes.beathopper"
+Events injected: 1
+## Network stats: elapsed time=34ms (0ms mobile, 0ms wifi, 34ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.amanotes.beathopper
+  bash arg: 500
+args: [-s, 1234, --throttle, 100, -p, com.amanotes.beathopper, 500]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.amanotes.beathopper"
+ arg: "500"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.amanotes.beathopper"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 500
+## Network stats: elapsed time=14452ms (0ms mobile, 0ms wifi, 14452ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.candywriter.bitlife.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.candywriter.bitlife
+  bash arg: 1
+args: [-s, 1234, -p, com.candywriter.bitlife, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.candywriter.bitlife"
+ arg: "1"
+data="1234"
+data="com.candywriter.bitlife"
+Events injected: 1
+## Network stats: elapsed time=30ms (0ms mobile, 0ms wifi, 30ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.candywriter.bitlife
+  bash arg: 500
+args: [-s, 1234, --throttle, 100, -p, com.candywriter.bitlife, 500]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.candywriter.bitlife"
+ arg: "500"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.candywriter.bitlife"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.candywriter.bitlife)
+    // activityResuming(com.candywriter.bitlife)
+Events injected: 500
+## Network stats: elapsed time=14925ms (0ms mobile, 0ms wifi, 14925ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.circleball.hoppingball.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.circleball.hoppingball
+  bash arg: 1
+args: [-s, 1234, -p, com.circleball.hoppingball, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.circleball.hoppingball"
+ arg: "1"
+data="1234"
+data="com.circleball.hoppingball"
+Events injected: 1
+## Network stats: elapsed time=61ms (0ms mobile, 0ms wifi, 61ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.circleball.hoppingball
+  bash arg: 500
+args: [-s, 1234, --throttle, 100, -p, com.circleball.hoppingball, 500]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.circleball.hoppingball"
+ arg: "500"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.circleball.hoppingball"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 500
+## Network stats: elapsed time=13923ms (0ms mobile, 0ms wifi, 13923ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
