@@ -36,7 +36,7 @@ def categorize_address(frame):
 
 with open('summary.csv', 'ab+') as csvfile:
   writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
-  writer.writerow(['Filename', 'Init. Timestamp', 'Fin. Timestamp', 'Δtime (s)', 'Δtime (min)', '# of Frames'])
+  writer.writerow(['Filename', 'Init. Timestamp', 'Fin. Timestamp', 'time (s)', 'time (min)', '# of Frames'])
 
 for pcap in os.listdir('pcaps/'):
   filename = os.path.join('pcaps/', pcap)
@@ -67,7 +67,7 @@ for pcap in os.listdir('pcaps/'):
 
   flat_results = [item for sublist in results for item in sublist]
 
-  with open('summary.csv', 'ab+') as csvfile:
+  with open('summary2.csv', 'ab+') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
     init_ts = flat_results[0][-1]
     end_ts = flat_results[-1][-1]
