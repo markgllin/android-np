@@ -10,6 +10,7 @@ import csv
 import sqlite3
 import ipaddress
 import os
+import sys
 
 from multiprocessing.dummy import Pool as ThreadPool 
 
@@ -39,7 +40,6 @@ def categorize_address(frame):
   
   return [(extrnl_ip, service) + frame]
 
-
 with open('summary.csv', 'ab+') as csvfile:
   writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
   writer.writerow(
@@ -64,6 +64,31 @@ with open('summary.csv', 'ab+') as csvfile:
       'Ad/Tracking IPs'
       ]
   )
+
+base_traffic = sys.argv[1]
+base_ips = []
+
+for ts, data in dpkt.pcapng.Reader(file(base_traffic, "rb")):
+  ether = dpkt.ethernet.Ethernet(data)
+        
+  if ether.type == dpkt.ethernet.ETH_TYPE_IP:
+    addr_family = socket.AF_INET
+  elif ether.type == dpkt.ethernet.ETH_TYPE_IP6:
+    addr_family = socket.AF_INET6
+  else:
+    continue
+
+  ip = ether.data
+  src_ip = socket.inet_ntop(addr_family, ip.src)
+  dst_ip = socket.inet_ntop(addr_family, ip.dst)
+
+  if not ipaddress.ip_address(src_ip).is_private:
+    base_ips.append(src_ip)
+  
+  if not ipaddress.ip_address(dst_ip).is_private:
+    base_ips.append(dst_ip)
+  
+base_ips = list(set(base_ips))
 
 for pcap in os.listdir('pcaps/Android9.0/'):
   if pcap.startswith('.'): next
@@ -117,12 +142,18 @@ for pcap in os.listdir('pcaps/Android9.0/'):
       writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
       writer.writerow(['Destination', 'Service', 'Src IP', 'Dst IP', 'Frame Size', 'Timestamp'])
       
-      for result in flat_results:
-        writer.writerow(result)
+      unique_base_ips = []
 
+      for result in flat_results:
         service = result[1]
-        ip = result[3]
+        ip = result[0]
         frame_size = result[4]
+
+        if ip in base_ips: 
+          unique_base_ips.append(ip)
+          continue
+
+        writer.writerow(result)
 
         ads = False
         tracking = False
@@ -149,8 +180,7 @@ for pcap in os.listdir('pcaps/Android9.0/'):
           benign_traffic_size += frame_size
           benign_frames += 1
 
-        
-
+    print(set(unique_base_ips))
     with open('summary.csv', 'ab+') as csvfile:
       writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
       init_ts = flat_results[0][-1]
