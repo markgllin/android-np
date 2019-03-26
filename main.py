@@ -17,7 +17,9 @@ from multiprocessing.dummy import Pool as ThreadPool
 def categorize_address(frame):
   extrnl_ip = ''
 
-  if ipaddress.ip_address(frame[0]).is_private:
+  if ipaddress.ip_address(frame[0]).is_private and ipaddress.ip_address(frame[1]).is_private:
+    return [('benign',) + frame]
+  elif ipaddress.ip_address(frame[0]).is_private:
     extrnl_ip = frame[1]
   else:
     extrnl_ip = frame[0]
@@ -36,9 +38,9 @@ def categorize_address(frame):
       service += ',' + result[1]
 
   if service == '':
-    return [(extrnl_ip, 'benign') + frame]
+    return [('benign',) + frame]
   
-  return [(extrnl_ip, service) + frame]
+  return [(service,) + frame]
 
 with open('summary.csv', 'ab+') as csvfile:
   writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
@@ -117,7 +119,7 @@ for pcap in os.listdir('pcaps/Android9.0/'):
         frames.append( (src_ip, dst_ip, framesize, ts) )
 
 
-    pool = ThreadPool(15)
+    pool = ThreadPool(20)
     results = pool.map(categorize_address, frames)
     pool.close()
     pool.join()
@@ -140,17 +142,25 @@ for pcap in os.listdir('pcaps/Android9.0/'):
 
     with open('results/' + pcap + '.csv', 'wb') as csvfile:
       writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
-      writer.writerow(['Destination', 'Service', 'Src IP', 'Dst IP', 'Frame Size', 'Timestamp'])
+      writer.writerow(['Service', 'Src IP', 'Dst IP', 'Frame Size', 'Timestamp'])
       
       unique_base_ips = []
 
       for result in flat_results:
-        service = result[1]
-        ip = result[0]
-        frame_size = result[4]
+        service = result[0]
+        src_ip = result[1]
+        dst_ip = result[2]
+        frame_size = result[3]
 
-        if ip in base_ips: 
-          unique_base_ips.append(ip)
+        if ipaddress.ip_address(src_ip).is_private and ipaddress.ip_address(dst_ip).is_private:
+          continue
+        elif ipaddress.ip_address(src_ip).is_private:
+          extrnl_ip = dst_ip
+        elif ipaddress.ip_address(dst_ip).is_private:
+          extrnl_ip = src_ip
+
+        if extrnl_ip in base_ips:
+          unique_base_ips.append(extrnl_ip)
           continue
 
         writer.writerow(result)
@@ -164,19 +174,19 @@ for pcap in os.listdir('pcaps/Android9.0/'):
           tracking = True
 
         if ads and tracking:
-          ad_tracking_ips.append(ip)
+          ad_tracking_ips.append(extrnl_ip)
           ad_tracking_traffic_size += frame_size
           ad_tracking_frames += 1
         elif ads:
-          ad_ips.append(ip)
+          ad_ips.append(extrnl_ip)
           ad_traffic_size += frame_size
           ad_frames += 1
         elif tracking:
-          tracking_ips.append(ip)
+          tracking_ips.append(extrnl_ip)
           tracking_traffic_size += frame_size
           tracking_frames += 1
         else:
-          benign_ips.append(ip)
+          benign_ips.append(extrnl_ip)
           benign_traffic_size += frame_size
           benign_frames += 1
 
