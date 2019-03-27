@@ -6,7 +6,7 @@ import time
 
 phone_ip = "192.168.137.186"
 sns.set_style("darkgrid")
-sns.set_palette(sns.color_palette("RdPu", 10))
+# sns.set_palette("bright")
 
 def frames_over_time(path):
     df = p.read_excel(path, index_col=None)
@@ -22,13 +22,20 @@ def frames_over_time(path):
             columns={"Frame Size": "Advertisements"})
         benign = dataset['Frame Size']['benign'].reset_index().rename(
             columns={"Frame Size": "Benign"})
-        print(benign)
+        # print(benign)
         tracking = dataset['Frame Size']['tracking'].reset_index().rename(
             columns={"Frame Size": "Tracking"})
+        both = dataset['Frame Size']['ads,tracking'].reset_index().rename(
+            columns={"Frame Size": "Both"})
 
-        plt.plot(ads["Time"], ads["Advertisements"])
-        plt.plot(benign["Time"], benign["Benign"])
-        plt.plot(tracking["Time"], tracking["Tracking"])
+
+        fig, ax = plt.subplots()
+        ax.plot(benign["Time"], benign["Benign"], '-o')
+        ax.plot(both["Time"], both["Both"], '-o')
+        ax.plot(ads["Time"], ads["Advertisements"], '-o')
+        ax.plot(tracking["Time"], tracking["Tracking"], '-o')
+        ax.set_xticklabels(benign["Time"])
+        plt.xticks(np.arange(len(benign["Time"])))
         plt.xlabel("Time")
         plt.ylabel("Total Frame Size")
         plt.legend()
@@ -55,9 +62,4 @@ plt.xticks(np.arange(len(ad_ips.index)))
 # print(np.arange(ad_ips.index))
 plt.show()
 
-# plt.bar(ad_ips.index, ad_ips.values)
-# plt.xticks(ad_ips.index)
-# print(ad_ips.index)
-# plt.show()
-
-# frames_over_time("./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx")
+frames_over_time("./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx")
