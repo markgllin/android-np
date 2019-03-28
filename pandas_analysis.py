@@ -50,29 +50,40 @@ def frames_over_time(path, sheet):
     create_graph(from_phone)
 
 def graph_ad_ips(path):
-    df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None, usecols="A,B,L,P")
+    df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
-    print("Max ad traffic...")
-    print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-    print("Max ad ips...")
-    print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+    ad_ips = df.groupby('Ad IPs')['Filename'].count()
+    tracking_ips = df.groupby('Tracking Ips')['Filename'].count()
 
-    # ad_ips = df.groupby(['Ad IPs'])['Ad Traffic Size'].count()
+    data_ips = {'Ad IPs': ad_ips, 'Tracking IPs': tracking_ips}
+    all_ips = p.DataFrame(data=data_ips)
 
-    ad_ips = df.groupby('Ad IPs')['Ad IPs'].count()
-    ad_ips = ad_ips.iloc[1:, ]
+    fig, ax = plt.subplots(figsize=(10, 7))
 
-    fig, ax = plt.subplots(figsize=(9, 7))
-    ax.bar(np.arange(len(ad_ips.index)), ad_ips.values)
-    ax.set_xticklabels(ad_ips.index) 
-    plt.xticks(np.arange(len(ad_ips.index)), **label_font)
+    r1 = np.arange(len(all_ips.index))
+    r2 = [x + 0.4 for x in r1]
+
+    plt.bar(r1, all_ips['Ad IPs'], width=0.4, label = "Advertisements")
+    plt.bar(r2, all_ips['Tracking IPs'], width=0.4, label = "Tracking")
+
+    ax.set_xticklabels(all_ips.index) 
+    plt.xticks(np.arange(len(all_ips.index)), **label_font)
+    plt.xticks([r + 0.20 for r in range(len(all_ips))], all_ips.index)
     plt.yticks(**label_font)
-    plt.title("Number of Applications per Number of Ad IP Connections", **title_font)
-    plt.xlabel("Number of Ad IP Connections", **axis_font)
+    plt.title("Distribution of Unique Connections", **title_font)
+    plt.xlabel("Number of IP Connections", **axis_font)
     plt.ylabel("Number of Applications", **axis_font)
-    # print(np.arange(ad_ips.index))
+    plt.legend(loc=1, fontsize=12)
     plt.savefig("./graphs/num_ad_ips.png")
     plt.show()
 
 graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
 # frames_over_time("./results/Android9.0/android_combined_results.xlsx", "com.amanotes.beathopper.apk.pca")
+
+df = p.read_excel(
+    "./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+
+print("Max ad traffic...")
+print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
+print("Max ad ips...")
+print(df[df["Ad IPs"] == df["Ad IPs"].max()])
