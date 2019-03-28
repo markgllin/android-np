@@ -8,8 +8,13 @@ phone_ip = "192.168.137.186"
 sns.set_style("darkgrid")
 # sns.set_palette("bright")
 
-def frames_over_time(path):
-    df = p.read_excel(path, index_col=None)
+title_font = {'fontname': 'Arial', 'size': '20', 'color': 'black', 'weight': 'normal',
+              'verticalalignment': 'bottom'}  # Bottom vertical alignment for more space
+axis_font = {'fontname': 'Arial', 'size': '16', 'color': 'black', 'weight': 'normal'}  # Bottom vertical alignment for more space
+label_font = {'fontname': 'Arial', 'size': '12', 'color': 'black', 'weight': 'normal'}
+
+def frames_over_time(path, sheet):
+    df = p.read_excel(path, index_col=None, sheet_name = sheet)
     df['Timestamp'] = p.to_datetime(df['Timestamp'], unit='s')
     df['Time'] = df["Timestamp"].dt.strftime("%H:%M")
 
@@ -44,22 +49,30 @@ def frames_over_time(path):
     create_graph(to_phone)
     create_graph(from_phone)
 
-path = "./results/Android9.0/Pandas Datasets/summary.xlsx"
+def graph_ad_ips(path):
+    df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None, usecols="A,B,L,P")
 
-df = p.read_excel(path, index_col=None, usecols="A,B,L,P")
-print("Max ad traffic...")
-print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-print("Max ad ips...")
-print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+    print("Max ad traffic...")
+    print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
+    print("Max ad ips...")
+    print(df[df["Ad IPs"] == df["Ad IPs"].max()])
 
-ad_ips = df.groupby(['Ad IPs'])['Ad Traffic Size'].sum()
-ad_ips = ad_ips.iloc[1:, ]
+    # ad_ips = df.groupby(['Ad IPs'])['Ad Traffic Size'].count()
 
-fig, ax = plt.subplots()
-ax.bar(np.arange(len(ad_ips.index)), ad_ips.values)
-ax.set_xticklabels(ad_ips.index)
-plt.xticks(np.arange(len(ad_ips.index)))
-# print(np.arange(ad_ips.index))
-plt.show()
+    ad_ips = df.groupby('Ad IPs')['Ad IPs'].count()
+    ad_ips = ad_ips.iloc[1:, ]
 
-frames_over_time("./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx")
+    fig, ax = plt.subplots(figsize=(9, 7))
+    ax.bar(np.arange(len(ad_ips.index)), ad_ips.values)
+    ax.set_xticklabels(ad_ips.index) 
+    plt.xticks(np.arange(len(ad_ips.index)), **label_font)
+    plt.yticks(**label_font)
+    plt.title("Number of Applications per Number of Ad IP Connections", **title_font)
+    plt.xlabel("Number of Ad IP Connections", **axis_font)
+    plt.ylabel("Number of Applications", **axis_font)
+    # print(np.arange(ad_ips.index))
+    plt.savefig("./graphs/num_ad_ips.png")
+    plt.show()
+
+graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
+# frames_over_time("./results/Android9.0/android_combined_results.xlsx", "com.amanotes.beathopper.apk.pca")

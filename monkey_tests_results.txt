@@ -14,6 +14,4376 @@ args: [-s, 1234, -p, co.ritual.app, 1]
 data="1234"
 data="co.ritual.app"
 Events injected: 1
+## Network stats: elapsed time=34ms (0ms mobile, 0ms wifi, 34ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: co.ritual.app
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, co.ritual.app, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "co.ritual.app"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="co.ritual.app"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+    // activityResuming(co.ritual.app)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=650425ms (0ms mobile, 0ms wifi, 650425ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.alibaba.aliexpresshd.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.alibaba.aliexpresshd
+  bash arg: 1
+args: [-s, 1234, -p, com.alibaba.aliexpresshd, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.alibaba.aliexpresshd"
+ arg: "1"
+data="1234"
+data="com.alibaba.aliexpresshd"
+Events injected: 1
+## Network stats: elapsed time=36ms (0ms mobile, 0ms wifi, 36ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.alibaba.aliexpresshd
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.alibaba.aliexpresshd, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.alibaba.aliexpresshd"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.alibaba.aliexpresshd"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+    // activityResuming(com.alibaba.aliexpresshd)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.alibaba.aliexpresshd)
+Events injected: 25000
+## Network stats: elapsed time=646873ms (0ms mobile, 0ms wifi, 646873ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.amazon.avod.thirdpartyclient.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.amazon.avod.thirdpartyclient
+  bash arg: 1
+args: [-s, 1234, -p, com.amazon.avod.thirdpartyclient, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.amazon.avod.thirdpartyclient"
+ arg: "1"
+data="1234"
+data="com.amazon.avod.thirdpartyclient"
+Events injected: 1
+## Network stats: elapsed time=34ms (0ms mobile, 0ms wifi, 34ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.amazon.avod.thirdpartyclient
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.amazon.avod.thirdpartyclient, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.amazon.avod.thirdpartyclient"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.amazon.avod.thirdpartyclient"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.amazon.avod.thirdpartyclient)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=643708ms (0ms mobile, 0ms wifi, 643708ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.amazon.mShop.android.shopping.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.amazon.mShop.android.shopping
+  bash arg: 1
+args: [-s, 1234, -p, com.amazon.mShop.android.shopping, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.amazon.mShop.android.shopping"
+ arg: "1"
+data="1234"
+data="com.amazon.mShop.android.shopping"
+Events injected: 1
+## Network stats: elapsed time=26ms (0ms mobile, 0ms wifi, 26ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.amazon.mShop.android.shopping
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.amazon.mShop.android.shopping, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.amazon.mShop.android.shopping"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.amazon.mShop.android.shopping"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.amazon.mShop.android.shopping)
+    // activityResuming(com.amazon.mShop.android.shopping)
+    // activityResuming(com.amazon.mShop.android.shopping)
+    // activityResuming(com.amazon.mShop.android.shopping)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.amazon.mShop.android.shopping)
+    // activityResuming(com.amazon.mShop.android.shopping)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=648257ms (0ms mobile, 0ms wifi, 648257ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.bitstrips.imoji.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.bitstrips.imoji
+  bash arg: 1
+args: [-s, 1234, -p, com.bitstrips.imoji, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.bitstrips.imoji"
+ arg: "1"
+data="1234"
+data="com.bitstrips.imoji"
+Events injected: 1
+## Network stats: elapsed time=54ms (0ms mobile, 0ms wifi, 54ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.bitstrips.imoji
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.bitstrips.imoji, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.bitstrips.imoji"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.bitstrips.imoji"
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+    // activityResuming(com.bitstrips.imoji)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.bitstrips.imoji)
+Events injected: 25000
+## Network stats: elapsed time=676573ms (0ms mobile, 0ms wifi, 676573ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.callerscreen.color.phone.ringtone.flash.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.callerscreen.color.phone.ringtone.flash
+  bash arg: 1
+args: [-s, 1234, -p, com.callerscreen.color.phone.ringtone.flash, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.callerscreen.color.phone.ringtone.flash"
+ arg: "1"
+data="1234"
+data="com.callerscreen.color.phone.ringtone.flash"
+Events injected: 1
 ## Network stats: elapsed time=43ms (0ms mobile, 0ms wifi, 43ms not connected)
 	Starting tshark...
 	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.callerscreen.color.phone.ringtone.flash
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.callerscreen.color.phone.ringtone.flash, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.callerscreen.color.phone.ringtone.flash"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.callerscreen.color.phone.ringtone.flash"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(android)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(android)
+    // activityResuming(android)
+    // activityResuming(android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.callerscreen.color.phone.ringtone.flash)
+Events injected: 25000
+## Network stats: elapsed time=653567ms (0ms mobile, 0ms wifi, 653567ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.contextlogic.wish.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.contextlogic.wish
+  bash arg: 1
+args: [-s, 1234, -p, com.contextlogic.wish, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.contextlogic.wish"
+ arg: "1"
+data="1234"
+data="com.contextlogic.wish"
+Events injected: 1
+## Network stats: elapsed time=29ms (0ms mobile, 0ms wifi, 29ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.contextlogic.wish
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.contextlogic.wish, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.contextlogic.wish"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.contextlogic.wish"
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.contextlogic.wish)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=647160ms (0ms mobile, 0ms wifi, 647160ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.ebay.kijiji.ca.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.ebay.kijiji.ca
+  bash arg: 1
+args: [-s, 1234, -p, com.ebay.kijiji.ca, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.ebay.kijiji.ca"
+ arg: "1"
+data="1234"
+data="com.ebay.kijiji.ca"
+Events injected: 1
+## Network stats: elapsed time=22ms (0ms mobile, 0ms wifi, 22ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.ebay.kijiji.ca
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.ebay.kijiji.ca, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.ebay.kijiji.ca"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.ebay.kijiji.ca"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.ebay.kijiji.ca)
+    // activityResuming(com.ebay.kijiji.ca)
+    // activityResuming(com.ebay.kijiji.ca)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.ebay.kijiji.ca)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.ebay.kijiji.ca)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.ebay.kijiji.ca)
+    // activityResuming(com.ebay.kijiji.ca)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.ebay.kijiji.ca)
+    // activityResuming(com.ebay.kijiji.ca)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=646514ms (0ms mobile, 0ms wifi, 646514ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.facebook.katana.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.facebook.katana
+  bash arg: 1
+args: [-s, 1234, -p, com.facebook.katana, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.facebook.katana"
+ arg: "1"
+data="1234"
+data="com.facebook.katana"
+Events injected: 1
+## Network stats: elapsed time=39ms (0ms mobile, 0ms wifi, 39ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.facebook.katana
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.facebook.katana, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.facebook.katana"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.facebook.katana"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+    // activityResuming(com.facebook.katana)
+Events injected: 25000
+## Network stats: elapsed time=654323ms (0ms mobile, 0ms wifi, 654323ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.facebook.orca.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.facebook.orca
+  bash arg: 1
+args: [-s, 1234, -p, com.facebook.orca, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.facebook.orca"
+ arg: "1"
+data="1234"
+data="com.facebook.orca"
+Events injected: 1
+## Network stats: elapsed time=39ms (0ms mobile, 0ms wifi, 39ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.facebook.orca
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.facebook.orca, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.facebook.orca"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.facebook.orca"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=645308ms (0ms mobile, 0ms wifi, 645308ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.google.android.apps.youtube.music.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.google.android.apps.youtube.music
+  bash arg: 1
+args: [-s, 1234, -p, com.google.android.apps.youtube.music, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.google.android.apps.youtube.music"
+ arg: "1"
+data="1234"
+data="com.google.android.apps.youtube.music"
+Events injected: 1
+## Network stats: elapsed time=36ms (0ms mobile, 0ms wifi, 36ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.google.android.apps.youtube.music
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.google.android.apps.youtube.music, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.google.android.apps.youtube.music"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.google.android.apps.youtube.music"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=649505ms (0ms mobile, 0ms wifi, 649505ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.google.android.play.games.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.google.android.play.games
+  bash arg: 1
+args: [-s, 1234, -p, com.google.android.play.games, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.google.android.play.games"
+ arg: "1"
+data="1234"
+data="com.google.android.play.games"
+Events injected: 1
+## Network stats: elapsed time=39ms (0ms mobile, 0ms wifi, 39ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.google.android.play.games
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.google.android.play.games, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.google.android.play.games"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.google.android.play.games"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.google.android.play.games)
+    // Injection Failed
+    // activityResuming(com.google.android.play.games)
+    // activityResuming(com.google.android.play.games)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.google.android.play.games)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=651123ms (0ms mobile, 0ms wifi, 651123ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.hy.sfacer.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.hy.sfacer
+  bash arg: 1
+args: [-s, 1234, -p, com.hy.sfacer, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.hy.sfacer"
+ arg: "1"
+data="1234"
+data="com.hy.sfacer"
+Events injected: 1
+## Network stats: elapsed time=54ms (0ms mobile, 0ms wifi, 54ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.hy.sfacer
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.hy.sfacer, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.hy.sfacer"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.hy.sfacer"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+    // activityResuming(com.hy.sfacer)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=645852ms (0ms mobile, 0ms wifi, 645852ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.instagram.android.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.instagram.android
+  bash arg: 1
+args: [-s, 1234, -p, com.instagram.android, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.instagram.android"
+ arg: "1"
+data="1234"
+data="com.instagram.android"
+Events injected: 1
+## Network stats: elapsed time=142ms (0ms mobile, 0ms wifi, 142ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.instagram.android
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.instagram.android, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.instagram.android"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.instagram.android"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.instagram.android)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=646931ms (0ms mobile, 0ms wifi, 646931ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
+Testing com.mcdonalds.superapp.apk...
+	Installing apk...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: -p
+  bash arg: com.mcdonalds.superapp
+  bash arg: 1
+args: [-s, 1234, -p, com.mcdonalds.superapp, 1]
+ arg: "-s"
+ arg: "1234"
+ arg: "-p"
+ arg: "com.mcdonalds.superapp"
+ arg: "1"
+data="1234"
+data="com.mcdonalds.superapp"
+Events injected: 1
+## Network stats: elapsed time=34ms (0ms mobile, 0ms wifi, 34ms not connected)
+	Starting tshark...
+	Starting Monkey...
+  bash arg: -s
+  bash arg: 1234
+  bash arg: --throttle
+  bash arg: 100
+  bash arg: -p
+  bash arg: com.mcdonalds.superapp
+  bash arg: 25000
+args: [-s, 1234, --throttle, 100, -p, com.mcdonalds.superapp, 25000]
+ arg: "-s"
+ arg: "1234"
+ arg: "--throttle"
+ arg: "100"
+ arg: "-p"
+ arg: "com.mcdonalds.superapp"
+ arg: "25000"
+data="1234"
+arg="--throttle" mCurArgData="null" mNextArg=3 argwas="--throttle" nextarg="100"
+data="100"
+data="com.mcdonalds.superapp"
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+    // Injection Failed
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+    // activityResuming(com.mcdonalds.superapp)
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Got IOException performing flipjava.io.IOException: write failed: EINVAL (Invalid argument)
+    // Injection Failed
+Events injected: 25000
+## Network stats: elapsed time=652978ms (0ms mobile, 0ms wifi, 652978ms not connected)
+	Done Monkey-ing around :)
+	Checking if tshark process exited...
+	Uninstalling apk...
