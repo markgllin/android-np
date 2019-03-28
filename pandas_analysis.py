@@ -55,23 +55,16 @@ def graph_ad_ips(path):
     ad_ips = df.groupby('Ad IPs')['Filename'].count()
     tracking_ips = df.groupby('Tracking Ips')['Filename'].count()
 
-    data_ips = {'Ad IPs': ad_ips, 'Tracking IPs': tracking_ips}
+    data_ips = {'Advertisments': ad_ips, 'Tracking IPs': tracking_ips}
     all_ips = p.DataFrame(data=data_ips)
 
-    fig, ax = plt.subplots(figsize=(10, 7))
-
-    r1 = np.arange(len(all_ips.index))
-    r2 = [x + 0.4 for x in r1]
-
-    plt.bar(r1, all_ips['Ad IPs'], width=0.4, label = "Advertisements")
-    plt.bar(r2, all_ips['Tracking IPs'], width=0.4, label = "Tracking")
-
-    ax.set_xticklabels(all_ips.index) 
-    plt.xticks(np.arange(len(all_ips.index)), **label_font)
-    plt.xticks([r + 0.20 for r in range(len(all_ips))], all_ips.index)
+    ax = all_ips.plot(kind='bar', stacked=True, figsize=(11, 7), rot=0)
+ 
+    ax.yaxis.set_major_locator(plt.FixedLocator(range(0,len(all_ips)+1)))
+    plt.xticks(**label_font)
     plt.yticks(**label_font)
     plt.title("Distribution of Unique Connections", **title_font)
-    plt.xlabel("Number of IP Connections", **axis_font)
+    plt.xlabel("Number of Unique IP Connections", **axis_font)
     plt.ylabel("Number of Applications", **axis_font)
     plt.legend(loc=1, fontsize=12)
     plt.savefig("./graphs/num_ad_ips.png")
