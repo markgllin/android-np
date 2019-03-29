@@ -33,8 +33,7 @@ def frames_over_time(path, sheet):
         both = dataset['Frame Size']['ads,tracking'].reset_index().rename(
             columns={"Frame Size": "Both"})
 
-
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=(11,7))
         ax.plot(benign["Time"], benign["Benign"], '-o')
         ax.plot(both["Time"], both["Both"], '-o')
         ax.plot(ads["Time"], ads["Advertisements"], '-o')
@@ -44,10 +43,15 @@ def frames_over_time(path, sheet):
         plt.xlabel("Time")
         plt.ylabel("Total Frame Size")
         plt.legend()
-        plt.show()
-    
+
     create_graph(to_phone)
+    plt.savefig("./graphs/to_phone_(" + sheet + ").png")
+    plt.show()
+
     create_graph(from_phone)
+    plt.savefig("./graphs/from_phone_(" + sheet + ").png")
+    plt.show()
+
 
 def graph_ad_ips(path):
     df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
@@ -58,7 +62,7 @@ def graph_ad_ips(path):
     data_ips = {'Advertisments': ad_ips, 'Tracking IPs': tracking_ips}
     all_ips = p.DataFrame(data=data_ips)
 
-    ax = all_ips.plot(kind='bar', stacked=True, figsize=(11, 7), rot=0)
+    ax = all_ips.plot(kind='bar', stacked=False, figsize=(11, 7), rot=0, width=0.8)
  
     ax.yaxis.set_major_locator(plt.FixedLocator(range(0,len(all_ips)+1)))
     plt.xticks(**label_font)
@@ -70,13 +74,18 @@ def graph_ad_ips(path):
     plt.savefig("./graphs/num_ad_ips.png")
     plt.show()
 
-graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
-# frames_over_time("./results/Android9.0/android_combined_results.xlsx", "com.amanotes.beathopper.apk.pca")
 
-df = p.read_excel(
-    "./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+# graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
+frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+                 "io.voodoo.crowdcity.apk.pcap")
+frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+                 "io.voodoo.paper2.apk.pcap")
+frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+                 "com.snow.drift.apk.pcap")
 
-print("Max ad traffic...")
-print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-print("Max ad ips...")
-print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+# df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+
+# print("Max ad traffic...")
+# print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
+# print("Max ad ips...")
+# print(df[df["Ad IPs"] == df["Ad IPs"].max()])
