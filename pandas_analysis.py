@@ -45,6 +45,7 @@ def frames_over_time(path, sheet):
         plt.title("Total Frame Size over Time per IP Type", **title_font)
         plt.xlabel("Time (in minutes)", **axis_font)
         plt.ylabel("Total Frame Size", **axis_font)
+        ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
     create_graph(to_phone)
@@ -56,7 +57,7 @@ def frames_over_time(path, sheet):
     # plt.show()
 
 
-def graph_ad_ips(path):
+def graph_ad_ips():
     df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
     ad_ips = df.groupby('Ad IPs')['Filename'].count()
@@ -77,14 +78,23 @@ def graph_ad_ips(path):
     plt.savefig("./graphs/num_ad_ips.png")
     # plt.show()
 
+def total_number_vs_size():
+    df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
-# graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
-frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-                 "io.voodoo.crowdcity.apk.pcap")
+    frame_nums = df[['Filename', 'Begnign Frames', 'Ad Frames', 'Tracking Frames', 'Ad/Tracking Frames']]
+    frame_size = df[['Filename', 'Benign Traffic Size', 'Ad Traffic Size', 'Tracking Traffic Size', 'Ad/Tracking Traffic Size']]
+
+    frame_nums = frame_nums.groupby(['Begnign Frames']).sum()
+    print(frame_nums.head(3))
+
+
+# graph_ad_ips()
+# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+#                  "io.voodoo.crowdcity.apk.pcap")
 frames_over_time("./results/Android9.0/android_combined_results.xlsx",
                  "io.voodoo.paper2.apk.pcap")
-frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-                 "com.snow.drift.apk.pcap")
+# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+#                  "com.snow.drift.apk.pcap")
 
 # frames_over_time(
 #     "./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx", "Sheet1")
@@ -95,3 +105,9 @@ print("Max ad traffic...")
 print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
 print("Max ad ips...")
 print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+print("Max tracking ips...")
+print(df[df["Tracking Ips"] == df["Tracking Ips"].max()])
+print("Max tracking traffic...")
+print(df[df["Tracking Traffic Size"] == df["Tracking Traffic Size"].max()])
+
+# total_number_vs_size()
