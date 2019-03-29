@@ -38,19 +38,22 @@ def frames_over_time(path, sheet):
         ax.plot(both["Time"], both["Both"], '-o')
         ax.plot(ads["Time"], ads["Advertisements"], '-o')
         ax.plot(tracking["Time"], tracking["Tracking"], '-o')
-        ax.set_xticklabels(benign["Time"])
-        plt.xticks(np.arange(len(benign["Time"])))
-        plt.xlabel("Time")
-        plt.ylabel("Total Frame Size")
-        plt.legend()
+        ax.set_xticklabels(range(0,16))
+        # ax.set_zticklabels(benign["Time"])
+        plt.xticks(np.arange(len(benign["Time"])), **label_font)
+        plt.yticks(**label_font)
+        plt.title("Total Frame Size over Time per IP Type", **title_font)
+        plt.xlabel("Time (in minutes)", **axis_font)
+        plt.ylabel("Total Frame Size", **axis_font)
+        plt.legend(fontsize=12)
 
     create_graph(to_phone)
     plt.savefig("./graphs/to_phone_(" + sheet + ").png")
-    plt.show()
+    # plt.show()
 
     create_graph(from_phone)
     plt.savefig("./graphs/from_phone_(" + sheet + ").png")
-    plt.show()
+    # plt.show()
 
 
 def graph_ad_ips(path):
@@ -72,7 +75,7 @@ def graph_ad_ips(path):
     plt.ylabel("Number of Applications", **axis_font)
     plt.legend(loc=1, fontsize=12)
     plt.savefig("./graphs/num_ad_ips.png")
-    plt.show()
+    # plt.show()
 
 
 # graph_ad_ips("./results/Android9.0/android_combined_results.xlsx")
@@ -83,9 +86,12 @@ frames_over_time("./results/Android9.0/android_combined_results.xlsx",
 frames_over_time("./results/Android9.0/android_combined_results.xlsx",
                  "com.snow.drift.apk.pcap")
 
-# df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+# frames_over_time(
+#     "./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx", "Sheet1")
 
-# print("Max ad traffic...")
-# print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-# print("Max ad ips...")
-# print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+
+print("Max ad traffic...")
+print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
+print("Max ad ips...")
+print(df[df["Ad IPs"] == df["Ad IPs"].max()])
