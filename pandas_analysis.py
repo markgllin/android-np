@@ -13,7 +13,51 @@ title_font = {'fontname': 'Arial', 'size': '20', 'color': 'black', 'weight': 'no
 axis_font = {'fontname': 'Arial', 'size': '16', 'color': 'black', 'weight': 'normal'}  # Bottom vertical alignment for more space
 label_font = {'fontname': 'Arial', 'size': '12', 'color': 'black', 'weight': 'normal'}
 
-def frames_over_time(path, sheet):
+
+def ips_over_time(path, sheet, app_name):
+    df = p.read_excel(path, index_col=None, sheet_name=sheet)
+    df['Timestamp'] = p.to_datetime(df['Timestamp'], unit='s')
+    df['Time'] = df["Timestamp"].dt.strftime("%H:%M")
+
+    to_phone, from_phone = [x for _, x in df.groupby(df['Src IP'] == phone_ip)]
+    dataset_to = to_phone.groupby(['Service', 'Time'])['Src IP'].nunique()
+    dataset_from = from_phone.groupby(['Service', 'Time'])['Dst IP'].nunique()
+
+    def create_graph(dataset, column):
+        dataset = dataset.to_frame()
+
+        ads = dataset[column]['ads'].reset_index().rename(
+            columns={column: "Advertisements"})
+        benign = dataset[column]['benign'].reset_index().rename(
+            columns={column: "Benign"})
+        tracking = dataset[column]['tracking'].reset_index().rename(
+            columns={column: "Tracking"})
+        both = dataset[column]['ads,tracking'].reset_index().rename(
+            columns={column: "Both"})
+
+        fig, ax = plt.subplots(figsize=(11, 7))
+        ax.plot(benign["Time"], benign["Benign"], '-o')
+        ax.plot(both["Time"], both["Both"], '-o')
+        ax.plot(ads["Time"], ads["Advertisements"], '-o')
+        ax.plot(tracking["Time"], tracking["Tracking"], '-o')
+        ax.set_xticklabels(range(0, 16))
+        plt.xticks(np.arange(len(benign["Time"])), **label_font)
+        plt.yticks(**label_font)
+        plt.title("Total Number of Unique IP Connections over Time per IP Type", **title_font)
+        plt.xlabel("Time (in minutes)", **axis_font)
+        plt.ylabel("Total Number of Unique IP Connections", **axis_font)
+        ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
+        plt.legend(fontsize=12)
+
+    create_graph(dataset_to, "Src IP")
+    plt.savefig("./graphs/ips_to_phone_(" + app_name + ").png")
+    # plt.show()
+
+    create_graph(dataset_from, "Dst IP")
+    plt.savefig("./graphs/ips_from_phone_(" + app_name + ").png")
+    # plt.show()
+
+def frames_over_time(path, sheet, app_name):
     df = p.read_excel(path, index_col=None, sheet_name = sheet)
     df['Timestamp'] = p.to_datetime(df['Timestamp'], unit='s')
     df['Time'] = df["Timestamp"].dt.strftime("%H:%M")
@@ -49,11 +93,11 @@ def frames_over_time(path, sheet):
         plt.legend(fontsize=12)
 
     create_graph(to_phone)
-    plt.savefig("./graphs/to_phone_(" + sheet + ").png")
+    plt.savefig("./graphs/to_phone_(" + app_name + ").png")
     # plt.show()
 
     create_graph(from_phone)
-    plt.savefig("./graphs/from_phone_(" + sheet + ").png")
+    plt.savefig("./graphs/from_phone_(" + app_name + ").png")
     # plt.show()
 
 
@@ -91,23 +135,32 @@ def total_number_vs_size():
 # graph_ad_ips()
 # frames_over_time("./results/Android9.0/android_combined_results.xlsx",
 #                  "io.voodoo.crowdcity.apk.pcap")
-frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-                 "io.voodoo.paper2.apk.pcap")
+# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
+                #  "io.voodoo.paper2.apk.pcap")1
 # frames_over_time("./results/Android9.0/android_combined_results.xlsx",
 #                  "com.snow.drift.apk.pcap")
 
-# frames_over_time(
-#     "./results/Android9.0/Pandas Datasets/largest_ad_traffic(io.voodo.crowdcity).xlsx", "Sheet1")
+ips_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
+frames_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
 
 df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
 print("Max ad traffic...")
 print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-print("Max ad ips...")
-print(df[df["Ad IPs"] == df["Ad IPs"].max()])
-print("Max tracking ips...")
-print(df[df["Tracking Ips"] == df["Tracking Ips"].max()])
-print("Max tracking traffic...")
-print(df[df["Tracking Traffic Size"] == df["Tracking Traffic Size"].max()])
+
+print("Ad Percentage")
+row = df[df['Filename'] == "io.voodoo.paper2.apk.pcap"]
+total = row['Benign Traffic Size'] + row['Ad Traffic Size'] + row['Tracking Traffic Size']
+print((row['Ad Traffic Size'] / total) * 100)
+print((row['Tracking Traffic Size'] / total) * 100)
+
+# print("Max ad ips...")
+# print(df[df["Ad IPs"] == df["Ad IPs"].max()])
+# print("Max tracking ips...")
+# print(df[df["Tracking Ips"] == df["Tracking Ips"].max()])
+# print("Max tracking traffic...")
+# print(df[df["Tracking Traffic Size"] == df["Tracking Traffic Size"].max()])
 
 # total_number_vs_size()
