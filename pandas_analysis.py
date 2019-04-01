@@ -131,6 +131,37 @@ def total_number_vs_size():
     frame_nums = frame_nums.groupby(['Begnign Frames']).sum()
     print(frame_nums.head(3))
 
+def calculate_percentages():
+    df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
+
+    print("Ad Percentage")
+    row = df[df['Filename'] == "io.voodoo.paper2.apk.pcap"]
+    total = row['Benign Traffic Size'] + \
+    row['Ad Traffic Size'] + row['Tracking Traffic Size']
+    print((row['Ad Traffic Size'] / total) * 100)
+    print((row['Tracking Traffic Size'] / total) * 100)
+
+
+def get_percentages(path):
+    df = p.read_excel(path, index_col=None)
+    df['Timestamp'] = p.to_datetime(df['Timestamp'], unit='s')
+    df['Time'] = df["Timestamp"].dt.strftime("%H:%M")
+    first = df['Time'][1]
+    first = (p.to_datetime(first) + p.Timedelta(minutes=1)).strftime("%H:%M")
+    df = df[df['Time'] > first]
+    df = df.groupby(['Service'])['Frame Size'].sum()
+    df = df.to_frame()
+
+    total = sum(df['Frame Size'])
+    ad_percent       = (df['Frame Size']['ads'] / total) * 100
+    tracking_percent = (df['Frame Size']['tracking'] / total) * 100
+    both_percent     = (df['Frame Size']['ads,tracking'] / total) * 100
+    benign_percent   = (df['Frame Size']['benign'] / total) * 100
+
+    print("Ads: %.2f \nTracking: %.2f\nBoth: %.2f\nBenign: %.2f"
+        %(ad_percent, tracking_percent, both_percent, benign_percent))
+
+get_percentages("./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx")
 
 # graph_ad_ips()
 # frames_over_time("./results/Android9.0/android_combined_results.xlsx",
@@ -140,21 +171,15 @@ def total_number_vs_size():
 # frames_over_time("./results/Android9.0/android_combined_results.xlsx",
 #                  "com.snow.drift.apk.pcap")
 
-ips_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
-frames_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
+# ips_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
+# frames_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
 
 df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
 print("Max ad traffic...")
 print(df[df["Ad Traffic Size"] == df["Ad Traffic Size"].max()])
-
-print("Ad Percentage")
-row = df[df['Filename'] == "io.voodoo.paper2.apk.pcap"]
-total = row['Benign Traffic Size'] + row['Ad Traffic Size'] + row['Tracking Traffic Size']
-print((row['Ad Traffic Size'] / total) * 100)
-print((row['Tracking Traffic Size'] / total) * 100)
 
 # print("Max ad ips...")
 # print(df[df["Ad IPs"] == df["Ad IPs"].max()])
@@ -164,3 +189,5 @@ print((row['Tracking Traffic Size'] / total) * 100)
 # print(df[df["Tracking Traffic Size"] == df["Tracking Traffic Size"].max()])
 
 # total_number_vs_size()
+
+#  dataset_from = from_phone.groupby(['Service', 'Time'])['Dst IP'].nunique()
