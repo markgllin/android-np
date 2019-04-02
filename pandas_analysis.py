@@ -86,9 +86,9 @@ def frames_over_time(path, sheet, app_name):
         # ax.set_zticklabels(benign["Time"])
         plt.xticks(np.arange(len(benign["Time"])), **label_font)
         plt.yticks(**label_font)
-        plt.title("Total Frame Size over Time per IP Type", **title_font)
+        plt.title("Total Traffic Sent over Time per IP Type", **title_font)
         plt.xlabel("Time (in minutes)", **axis_font)
-        plt.ylabel("Total Frame Size", **axis_font)
+        plt.ylabel("Total Traffic Sent (in bytes)", **axis_font)
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
@@ -161,20 +161,18 @@ def get_percentages(path):
     print("Ads: %.2f \nTracking: %.2f\nBoth: %.2f\nBenign: %.2f"
         %(ad_percent, tracking_percent, both_percent, benign_percent))
 
-get_percentages("./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx")
+get_percentages("./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx")
 
 # graph_ad_ips()
-# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-#                  "io.voodoo.crowdcity.apk.pcap")
-# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-                #  "io.voodoo.paper2.apk.pcap")1
-# frames_over_time("./results/Android9.0/android_combined_results.xlsx",
-#                  "com.snow.drift.apk.pcap")
 
-# ips_over_time(
-#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
-# frames_over_time(
-#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.apk.pcap.xlsx", "Sheet1", "io.voodoo.paper2")
+ips_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
+frames_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
+ips_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
+frames_over_time(
+    "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
 
 df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
