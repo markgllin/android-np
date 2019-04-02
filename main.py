@@ -193,29 +193,32 @@ for pcap in os.listdir('pcaps/Android9.0/'):
     print(set(unique_base_ips))
     with open('summary.csv', 'ab+') as csvfile:
       writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
-      init_ts = flat_results[0][-1]
-      end_ts = flat_results[-1][-1]
-      delta_time_s = end_ts - init_ts
-      delta_time_min = delta_time_s/60
-      writer.writerow([
-        pcap, 
-        flat_results[0][-1], 
-        flat_results[-1][-1], 
-        delta_time_s, 
-        delta_time_min, 
-        len(flat_results), 
-        benign_frames,
-        ad_frames,
-        tracking_frames,
-        ad_tracking_frames,
-        benign_traffic_size,
-        ad_traffic_size,
-        tracking_traffic_size,
-        ad_tracking_traffic_size,
-        len(set(benign_ips)),
-        len(set(ad_ips)),
-        len(set(tracking_ips)),
-        len(set(ad_tracking_ips)),
-        ])
+      try:
+        init_ts = flat_results[0][-1]
+        end_ts = flat_results[-1][-1]
+        delta_time_s = end_ts - init_ts
+        delta_time_min = delta_time_s/60
+        writer.writerow([
+          pcap, 
+          flat_results[0][-1], 
+          flat_results[-1][-1], 
+          delta_time_s, 
+          delta_time_min, 
+          len(flat_results), 
+          benign_frames,
+          ad_frames,
+          tracking_frames,
+          ad_tracking_frames,
+          benign_traffic_size,
+          ad_traffic_size,
+          tracking_traffic_size,
+          ad_tracking_traffic_size,
+          len(set(benign_ips)),
+          len(set(ad_ips)),
+          len(set(tracking_ips)),
+          len(set(ad_tracking_ips)),
+          ])
+      except (IndexError):
+        print(pcap + ' has some weird index error...')
   except (ValueError):
     print(pcap + ' is not a pcap file.')
