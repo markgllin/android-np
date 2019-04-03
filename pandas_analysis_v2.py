@@ -18,6 +18,50 @@ label_font = {'fontname': 'Arial', 'size': '12', 'color': 'black', 'weight': 'no
 #                HTTPS STUFF               #
 ############################################
 
+def distribute_time(all_dfs):
+    all_times = []
+    for df in all_dfs:
+        all_times += list(df["Time"])
+    
+    all_times = sorted(list(dict.fromkeys(all_times)))
+    start = p.to_datetime(min(all_times))
+    end = p.to_datetime(max(all_times))
+    times = []
+    while(start <= end):
+        times.append(start.strftime("%H:%M"))
+        start = start + p.Timedelta(minutes=1)
+
+    time_range = p.DataFrame({'Time': times})
+    cleaned = []
+    for frame in all_dfs:
+        clean = p.concat([time_range, frame], join="outer", sort=False)
+        clean.drop_duplicates(subset=['Time'], keep='last', inplace=True)
+        clean.sort_values(by=['Time'], inplace = True)
+        clean = clean.reset_index().drop('index', axis=1)
+        cleaned.append(clean)
+    return cleaned
+
+def get_all_dfs(dataset, column):
+    service_types = list(dataset[column].index.levels[0])
+    all_dfs   = []
+    if 'benign' in service_types:
+        benign = dataset[column]['benign'].reset_index().rename(columns={
+            column: "Benign"})
+        all_dfs.append(benign)
+    if 'ads' in service_types:
+        ads = dataset[column]['ads'].reset_index().rename(
+            columns={column: "Advertisements"})
+        all_dfs.append(ads)
+    if 'tracking' in service_types:
+        tracking = dataset[column]['tracking'].reset_index().rename(columns={
+            column: "Tracking"})
+        all_dfs.append(tracking)
+    if 'ads,tracking' in service_types:
+        both = dataset[column]['ads,tracking'].reset_index().rename(columns={
+            column: "Both"})
+        all_dfs.append(both)
+    return all_dfs
+
 def ips_over_time(path, sheet, app_name):
     df = p.read_excel(path, index_col=None, sheet_name=sheet)
     df['timestamp'] = p.to_datetime(df['timestamp'], unit='s')
@@ -30,30 +74,19 @@ def ips_over_time(path, sheet, app_name):
         dataset = dataset.to_frame()
 
         fig, ax = plt.subplots(figsize=(11, 7))
-
-        benign = dataset[column]['benign'].reset_index().rename(columns={
-            column: "Benign"})
-        ax.plot(benign["Time"], benign["Benign"], '-o')
-
-        ads = dataset[column]['ads'].reset_index().rename(
-            columns={column: "Advertisements"})
-        ax.plot(ads["Time"], ads["Advertisements"], '-o')
-
-        tracking = dataset[column]['tracking'].reset_index().rename(columns={
-            column: "Tracking"})
-        ax.plot(tracking["Time"], tracking["Tracking"], '-o')
-
         service_types = list(dataset[column].index.levels[0])
-        if 'ads,tracking' in service_types:
-            both = dataset[column]['ads,tracking'].reset_index().rename(columns={
-                column: "Both"})
-            ax.plot(both["Time"], both["Both"], '-o')
+        all_dfs = get_all_dfs(dataset, column)
+        cleaned = distribute_time(all_dfs)
+        for frame in cleaned:
+            type = frame[frame.columns[1]].name
+            ax.plot(frame['Time'], frame[type], '-o')
 
         ax.set_xticklabels(range(0, 16))
-        plt.xticks(np.arange(len(benign["Time"])), **label_font)
+        # plt.xticks(np.arange(len(benign["Time"])), **label_font)
+        plt.xticks(**label_font)
         plt.yticks(**label_font)
         plt.title(
-            "Total Number of Unique IP Requests over Time over HTTPS", **title_font)
+            "Total Number of Unique IP Requests over HTTPS", **title_font)
         plt.xlabel("Time (in minutes)", **axis_font)
         plt.ylabel("Total Number of Unique IP Connections", **axis_font)
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
@@ -74,25 +107,16 @@ def frames_over_time(path, sheet, app_name):
         column = 'frame size'
 
         fig, ax = plt.subplots(figsize=(11, 7))
-
-        benign = dataset[column]['benign'].reset_index().rename(columns={column: "Benign"})
-        ax.plot(benign["Time"], benign["Benign"], '-o')
-
-        ads = dataset[column]['ads'].reset_index().rename(columns={column: "Advertisements"})
-        ax.plot(ads["Time"], ads["Advertisements"], '-o')
-
-        tracking = dataset[column]['tracking'].reset_index().rename(columns={column: "Tracking"})
-        ax.plot(tracking["Time"], tracking["Tracking"], '-o')
-
-        service_types = list(dataset[column].index.levels[0])
-        if 'ads,tracking' in service_types:
-            both = dataset[column]['ads,tracking'].reset_index().rename(columns={column: "Both"})
-            ax.plot(both["Time"], both["Both"], '-o')
+        all_dfs = get_all_dfs(dataset, column)
+        cleaned = distribute_time(all_dfs)
+        for frame in cleaned:
+            type = frame[frame.columns[1]].name
+            ax.plot(frame['Time'], frame[type], '-o')
 
         ax.set_xticklabels(range(0,16))
-        plt.xticks(np.arange(len(benign["Time"])), **label_font)
+        plt.xticks(**label_font)
         plt.yticks(**label_font)
-        plt.title("Total Traffic Sent over Time per IP Type (over HTTPS)", **title_font)
+        plt.title("Total Traffic Sent over HTTPS", **title_font)
         plt.xlabel("Time (in minutes)", **axis_font)
         plt.ylabel("Total Traffic Sent (in bytes)", **axis_font)
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
@@ -117,64 +141,26 @@ def domains_over_time(path, sheet, app_name):
 
         fig, ax = plt.subplots(figsize=(11, 7))
         service_types = list(dataset[column].index.levels[0])
-        all_times = []
-        all_dfs   = []
-
-        if 'benign' in service_types:
-            benign = dataset[column]['benign'].reset_index().rename(columns={
-                column: "Benign"})
-            all_dfs.append(benign)
-            all_times += list(benign["Time"])
-
-        if 'ads' in service_types:
-            ads = dataset[column]['ads'].reset_index().rename(
-                columns={column: "Advertisements"})
-            all_dfs.append(ads)
-            all_times += list(ads["Time"])
-
-        if 'tracking' in service_types:
-            tracking = dataset[column]['tracking'].reset_index().rename(columns={
-                column: "Tracking"})
-            all_dfs.append(tracking)
-            all_times += list(tracking["Time"])
-
-        if 'ads,tracking' in service_types:
-            both = dataset[column]['ads,tracking'].reset_index().rename(columns={
-                column: "Both"})
-            all_dfs.append(both)
-            all_times += list(both["Time"])
-        
-        all_times = sorted(list(dict.fromkeys(all_times)))
-        start = p.to_datetime(min(all_times))
-        end = p.to_datetime(max(all_times))
-        times = []
-        while(start <= end):
-            times.append(start.strftime("%H:%M"))
-            start = start + p.Timedelta(minutes=1)
-
-        time_range = p.DataFrame({'Time': times})
-
-        for frame in all_dfs:
-            clean = p.concat([time_range, frame], join="outer", sort=False)
+        all_dfs = get_all_dfs(dataset, column)
+        cleaned = distribute_time(all_dfs)
+        for frame in cleaned:
             type = frame[frame.columns[1]].name
-            ax.plot(clean['Time'], clean[type], '-o')
+            ax.plot(frame['Time'], frame[type], '-o')
 
         ax.set_xticklabels(range(0, 16))
-        plt.xticks(np.arange(len(time_range)), **label_font)
+        # plt.xticks(np.arange(len(cleaned[0]['Time'])), **label_font)
+        plt.xticks(**label_font)
         plt.yticks(**label_font)
-        plt.title(
-            "Total Traffic Sent over Time per IP Type (over HTTPS)", **title_font)
+        plt.title("Total Domain Requests/Responses over HTTP", **title_font)
         plt.xlabel("Time (in minutes)", **axis_font)
-        plt.ylabel("Total Traffic Sent (in bytes)", **axis_font)
+        plt.ylabel("Total Number of Domains", **axis_font)
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
-
     create_graph(df)
-    plt.show()
+    plt.savefig("./graphs/v2/http_domain_number_(" + app_name + ").png")
 
 
-# ips_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
-# frames_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
-
+ips_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
+frames_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
 domains_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTP", "io.voodoo.paper2.apk")
