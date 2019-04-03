@@ -1,0 +1,31 @@
+timestamp,src ip,dst ip,service,domain,frame size
+timestamp,src ip,dst ip,Associated Services,Associated Domains,frame size
+1553147969.001909,192.168.137.186,23.21.55.135,benign,,66
+1553147969.024198,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.024199,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.0242,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.024201,192.168.137.186,54.204.3.50,benign,,66
+1553147969.085608,23.21.55.135,192.168.137.186,benign,,97
+1553147969.085858,23.21.55.135,192.168.137.186,benign,,66
+1553147969.114604,54.204.3.50,192.168.137.186,benign,,97
+1553147969.114813,54.204.3.50,192.168.137.186,benign,,66
+1553147969.153499,192.168.137.186,23.21.55.135,benign,,54
+1553147969.1535,192.168.137.186,23.21.55.135,benign,,54
+1553147969.1535,192.168.137.186,54.204.3.50,benign,,54
+1553147969.153501,192.168.137.186,54.204.3.50,benign,,54
+1553147969.222543,203.119.215.106,192.168.137.186,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.225241,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.227353,203.119.215.106,192.168.137.186,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.232401,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.238302,203.119.215.106,192.168.137.186,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553147969.241451,192.168.137.186,203.119.215.106,ads,"survey1.umeng.com,ubdc2016.umeng.com,ocx.umeng.com,tip.umeng.com,msgapi.umeng.com,dev.umeng.com,beta.umeng.com,alogs.umeng.com,index.umeng.com,adplus.umeng.com,ulogs.umeng.com",54
+1553148031.866269,192.168.137.186,173.194.203.188,benign,,101
+1553148031.90722,173.194.203.188,192.168.137.186,benign,,99
+1553148031.909974,192.168.137.186,173.194.203.188,benign,,66
+1553148262.04254,192.168.137.186,173.194.203.188,benign,,101
+1553148262.081784,173.194.203.188,192.168.137.186,benign,,99
+1553148262.084095,192.168.137.186,173.194.203.188,benign,,66
+1553148522.504847,173.194.203.188,192.168.137.186,benign,,97
+1553148522.712258,192.168.137.186,173.194.203.188,benign,,66
+1553148522.7172,192.168.137.186,173.194.203.188,benign,,105
+1553148522.795502,173.194.203.188,192.168.137.186,benign,,66

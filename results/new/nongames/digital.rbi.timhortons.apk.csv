@@ -1,0 +1,2 @@
+timestamp,src ip,dst ip,service,domain,frame size
+timestamp,src ip,dst ip,Associated Services,Associated Domains,frame size
