@@ -26,20 +26,22 @@ def ips_over_time(path, sheet, app_name):
     def create_graph(dataset, column):
         dataset = dataset.to_frame()
 
-        ads = dataset[column]['ads'].reset_index().rename(
-            columns={column: "Advertisements"})
-        benign = dataset[column]['benign'].reset_index().rename(
-            columns={column: "Benign"})
-        tracking = dataset[column]['tracking'].reset_index().rename(
-            columns={column: "Tracking"})
-        both = dataset[column]['ads,tracking'].reset_index().rename(
-            columns={column: "Both"})
-
         fig, ax = plt.subplots(figsize=(11, 7))
+
+        benign = dataset[column]['benign'].reset_index().rename(columns={column: "Benign"})
         ax.plot(benign["Time"], benign["Benign"], '-o')
-        ax.plot(both["Time"], both["Both"], '-o')
+
+        ads = dataset[column]['ads'].reset_index().rename(columns={column: "Advertisements"})
         ax.plot(ads["Time"], ads["Advertisements"], '-o')
+
+        tracking = dataset[column]['tracking'].reset_index().rename(columns={column: "Tracking"})
         ax.plot(tracking["Time"], tracking["Tracking"], '-o')
+
+        service_types = list(dataset[column].index.levels[0])
+        if 'ads,tracking' in service_types:
+            both = dataset[column]['ads,tracking'].reset_index().rename(columns={column: "Both"})
+            ax.plot(both["Time"], both["Both"], '-o')
+
         ax.set_xticklabels(range(0, 16))
         plt.xticks(np.arange(len(benign["Time"])), **label_font)
         plt.yticks(**label_font)
@@ -67,21 +69,24 @@ def frames_over_time(path, sheet, app_name):
     def create_graph(dataset):
         dataset = dataset.groupby(['Service', 'Time'])['Frame Size'].sum()
         dataset = dataset.to_frame()
-        ads = dataset['Frame Size']['ads'].reset_index().rename(
-            columns={"Frame Size": "Advertisements"})
-        benign = dataset['Frame Size']['benign'].reset_index().rename(
-            columns={"Frame Size": "Benign"})
-        # print(benign)
-        tracking = dataset['Frame Size']['tracking'].reset_index().rename(
-            columns={"Frame Size": "Tracking"})
-        both = dataset['Frame Size']['ads,tracking'].reset_index().rename(
-            columns={"Frame Size": "Both"})
+        column = 'Frame Size'
 
-        fig, ax = plt.subplots(figsize=(11,7))
+        fig, ax = plt.subplots(figsize=(11, 7))
+
+        benign = dataset[column]['benign'].reset_index().rename(columns={column: "Benign"})
         ax.plot(benign["Time"], benign["Benign"], '-o')
-        ax.plot(both["Time"], both["Both"], '-o')
+
+        ads = dataset[column]['ads'].reset_index().rename(columns={column: "Advertisements"})
         ax.plot(ads["Time"], ads["Advertisements"], '-o')
+
+        tracking = dataset[column]['tracking'].reset_index().rename(columns={column: "Tracking"})
         ax.plot(tracking["Time"], tracking["Tracking"], '-o')
+
+        service_types = list(dataset[column].index.levels[0])
+        if 'ads,tracking' in service_types:
+            both = dataset[column]['ads,tracking'].reset_index().rename(columns={column: "Both"})
+            ax.plot(both["Time"], both["Both"], '-o')
+
         ax.set_xticklabels(range(0,16))
         # ax.set_zticklabels(benign["Time"])
         plt.xticks(np.arange(len(benign["Time"])), **label_font)
@@ -161,18 +166,22 @@ def get_percentages(path):
     print("Ads: %.2f \nTracking: %.2f\nBoth: %.2f\nBenign: %.2f"
         %(ad_percent, tracking_percent, both_percent, benign_percent))
 
-get_percentages("./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx")
+# get_percentages("./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx")
 
 # graph_ad_ips()
 
+# ips_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
+# frames_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
+# ips_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
+# frames_over_time(
+#     "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
 ips_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
+    "./results/Android9.0/Pandas Datasets/com.playgendary.kickthebuddy.xlsx", "Sheet1", "com.playgendary.kickthebuddy")
 frames_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.paper2.xlsx", "Sheet1", "io.voodoo.paper2")
-ips_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
-frames_over_time(
-    "./results/Android9.0/Pandas Datasets/io.voodoo.crowdcity.xlsx", "Sheet1", "io.voodoo.crowdcity")
+    "./results/Android9.0/Pandas Datasets/com.playgendary.kickthebuddy.xlsx", "Sheet1", "com.playgendary.kickthebuddy")
 
 df = p.read_excel("./results/Android9.0/Pandas Datasets/summary.xlsx", index_col=None)
 
