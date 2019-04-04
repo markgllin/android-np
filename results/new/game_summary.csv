@@ -1,4 +1,4 @@
-Package Name,Benign Domains,Benign IPs,Benign Traffic,Ad Domains,Ad IPs,Ad Traffic,Tracking Domains,Tracking IPs,Tracking Traffic,Suspected Benign IPs,Suspected Benign TrafficSuspected Ad Domains,Suspected Ad IPs,Suspected Ad Traffic,Suspected Tracking Domains,Suspected Tracking IPs,Suspected Tracking Traffic
+Package Name,Benign Domains,Benign IPs,Benign Traffic,Ad Domains,Ad IPs,Ad Traffic,Tracking Domains,Tracking IPs,Tracking Traffic,Suspected Benign IPs,Suspected Benign Traffic,Suspected Ad Domains,Suspected Ad IPs,Suspected Ad Traffic,Suspected Tracking Domains,Suspected Tracking IPs,Suspected Tracking Traffic
 com.peoplefun.wordcross.apk,,0,0,,0,0,,0,0,13,144167,,0,0,,0,0
 com.youmusic.magictiles.apk,"52.71.9.24:1341,d25l8ybundaqcq.cloudfront.net,superpowered.com",3,1457,,0,0,,0,0,64,51742422,"ecommerce.iap.unity3d.com,stats.unity3d.com,api.uca.cloud.unity3d.com,cdp.cloud.unity3d.com,stats.appsflyer.com,click-haproxy.supersonicads.com",4,515933,cds.s5x3j6q5.hwcdn.net,4,82314
 com.luckyday.app.apk,,0,0,,0,0,,0,0,24,5361573,"ads.mopub.com,mpx-dashboard.mopub.com,app.mopub.com",1,1542,,1,0
