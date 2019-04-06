@@ -7,8 +7,10 @@ import datetime
 import math
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
+p.options.mode.chained_assignment = None
 
 phone_ip = "192.168.137.186"
+phone_ip2 = "192.168.137.46"
 sns.set_style("darkgrid")
 # sns.set_palette("bright")
 
@@ -71,10 +73,21 @@ def get_all_dfs(dataset, column):
 def set_fonts():
     plt.xticks(**label_font)
     plt.yticks(**label_font)
-    plt.title("Total Domain Requests/Responses over HTTP", **title_font)
-    plt.xlabel("Time (in minutes)", **axis_font)
-    plt.ylabel("Total Number of Domains", **axis_font)
+    plt.title("", **title_font)
+    plt.xlabel("", **axis_font)
+    plt.ylabel("", **axis_font)
 
+
+def clean_package_name(package_name):
+    shortened = ""
+    if(not p.isnull(package_name)):
+        parts = package_name.split('.')
+        if(parts[2] == 'apk'):
+            shortened = parts[1]
+        else:
+            shortened = parts[1] + "." + parts[2]
+        return shortened
+            
 
 ############################################
 #                HTTPS STUFF               #
@@ -85,32 +98,36 @@ def ips_over_time(path, sheet, app_name):
     df['timestamp'] = p.to_datetime(df['timestamp'], unit='s')
     df['Time'] = df["timestamp"].dt.strftime("%H:%M")
 
-    to_phone, from_phone = [x for _, x in df.groupby(df['src ip'] == phone_ip)]
-    dataset_from = from_phone.groupby(['service', 'Time'])['dst ip'].nunique()
+    destination = df[(df['dst ip'] != phone_ip) & (df['dst ip'] != phone_ip2)]['dst ip']
+    source = df[(df['src ip'] != phone_ip) & (df['src ip'] != phone_ip2)]['src ip']
+    both = (destination.append(source)).to_frame()
+    both.sort_index(inplace=True)
+    df.drop(['src ip', 'dst ip'], axis=1, inplace=True)
+    df['src/dst'] = both
+   
+    df = (df.groupby(['service', 'Time'])['src/dst'].nunique()).to_frame()
 
     def create_graph(dataset, column):
-        dataset = dataset.to_frame()
-
         fig, ax = plt.subplots(figsize=(11, 7))
         service_types = list(dataset[column].index.levels[0])
         all_dfs = get_all_dfs(dataset, column)
         cleaned = distribute_time(all_dfs)
         for frame in cleaned:
-            type = frame[frame.columns[1]].name
-            ax.plot(frame['Time'], frame[type], '-o')
+            _type = frame[frame.columns[1]].name
+            ax.plot(frame['Time'], frame[_type], '-o')
 
         ax.set_xticklabels(range(0, 16))
-        plt.xticks(**label_font)
-        plt.yticks(**label_font)
-        plt.title(
-            "Total Number of Unique IP Requests over HTTPS", **title_font)
-        plt.xlabel("Time (in minutes)", **axis_font)
-        plt.ylabel("Total Number of Unique IP Connections", **axis_font)
+        set_fonts()
+        plt.title("Total Number of Unique IP Connections over " +
+                  sheet, **title_font)
+        plt.xlabel("Time (in minutes)")
+        plt.ylabel("Total Number of Unique IP Connections")
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
-    create_graph(dataset_from, "dst ip")
-    plt.savefig("./graphs/v2/https_unique_ip_responses_(" + app_name + ").png")
+    create_graph(df, "src/dst")
+    # plt.show()
+    plt.savefig("./graphs/v2/" + sheet + "_unique_ip_responses_(" + app_name + ").png")
 
 
 def frames_over_time(path, sheet, app_name):
@@ -131,16 +148,15 @@ def frames_over_time(path, sheet, app_name):
             ax.plot(frame['Time'], frame[type], '-o')
 
         ax.set_xticklabels(range(0,16))
-        plt.xticks(**label_font)
-        plt.yticks(**label_font)
-        plt.title("Total Traffic Sent over HTTPS", **title_font)
-        plt.xlabel("Time (in minutes)", **axis_font)
-        plt.ylabel("Total Traffic Sent (in bytes)", **axis_font)
+        set_fonts()
+        plt.title("Total Traffic Sent over " + sheet, **title_font)
+        plt.xlabel("Time (in minutes)")
+        plt.ylabel("Total Traffic Sent (in bytes)")
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
     create_graph(df)
-    plt.savefig("./graphs/v2/https_traffic_(" + app_name + ").png")
+    plt.savefig("./graphs/v2/" + sheet + "_traffic_(" + app_name + ").png")
 
 
 ############################################
@@ -166,41 +182,76 @@ def domains_over_time(path, sheet, app_name):
             ax.plot(frame['Time'], frame[type], '-o')
 
         ax.set_xticklabels(range(0, 16))
-        # plt.xticks(np.arange(len(cleaned[0]['Time'])), **label_font)
-        plt.xticks(**label_font)
-        plt.yticks(**label_font)
-        plt.title("Total Domain Requests/Responses over HTTP", **title_font)
-        plt.xlabel("Time (in minutes)", **axis_font)
-        plt.ylabel("Total Number of Domains", **axis_font)
+        set_fonts()
+        plt.title("Total Domain Requests/Responses over "  + sheet, **title_font)
+        plt.xlabel("Time (in minutes)")
+        plt.ylabel("Total Number of Domains")
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
     create_graph(df)
-    plt.savefig("./graphs/v2/http_domain_number_(" + app_name + ").png")
+    plt.savefig("./graphs/v2/" + sheet + "_domain_number_(" + app_name + ").png")
+
+
+def https_vs_http(path, app_name):
+    http = p.read_excel(path, index_col=None, sheet_name='HTTP')
+    https = p.read_excel(path, index_col=None, sheet_name='HTTPS')
+
+    http['timestamp'] = p.to_datetime(http['timestamp'], unit='s')
+    https['timestamp'] = p.to_datetime(https['timestamp'], unit='s')
+    http['Time'] = http["timestamp"].dt.strftime("%H:%M")
+    https['Time'] = https["timestamp"].dt.strftime("%H:%M")
+    http = http.groupby(['Time'])['frame size'].sum().to_frame().reset_index()
+    https = https.groupby(['Time'])['frame size'].sum().to_frame().reset_index()
+    http.columns = ['Time', 'HTTP Frame Size']
+    https.columns = ['Time', 'HTTPS Frame Size']
+
+    http, https = distribute_time([http, https])
+    both = http.merge(https)
+
+    fig, ax = plt.subplots(figsize=(11, 7))
+
+    both.plot(ax=ax, secondary_y=['HTTPS Frame Size'], style='-o')
+    ax.set_xticklabels(range(0, 16))
+    plt.title("HTTP Traffic VS HTTPS Traffic over Time", **title_font)
+    ax.set_xlabel("Time (in minutes)", **axis_font)
+    ax.set_ylabel('Total Traffic over HTTP (in bytes)', **axis_font)
+    ax.right_ax.set_ylabel('Total Traffic over HTTPS (in bytes)', **axis_font)
+    ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
+    ax.right_ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
+
+    lines = ax.get_lines() + ax.right_ax.get_lines()
+    ax.legend(lines, [l.get_label() for l in lines], loc='upper right', fontsize=12)
+    
+    plt.savefig("./graphs/v2/http_vs_https_(" + app_name + ").png")
+    # plt.show()
 
 
 ############################################
 #               EITHER STUFF               #
 ############################################
 
-def get_all_domains(path, app_name, sheet=None):
-    if(sheet == None):
-        df1 = p.read_excel(path, index_col=None, sheet_name="HTTP")
-        df2 = p.read_excel(path, index_col=None, sheet_name="HTTPS")
-        all_domains = list(df1['domain'].dropna())
-        all_domains += list(df2['domain'].dropna())
-    else:
-        df = p.read_excel(path, index_col=None, sheet_name=sheet)
-        all_domains = list(df['domain'].dropna())
+def get_all_domains(path, app_name):
+    df = p.read_excel(path, index_col=None, sheet_name='HTTP')
+    all_domains = list(df['domain'].dropna())
+    domain_class = df[['domain', 'service']].drop_duplicates()
 
     domain_dict = {}
     for domain in all_domains:
-            if domain in domain_dict:
-                domain_dict[domain] += 1
-            else:
-                 domain_dict[domain] = 1
+        if domain in domain_dict:
+            domain_dict[domain] += 1
+        else:
+            domain_dict[domain] = 1
 
-    print(p.DataFrame.from_dict(domain_dict, orient='index'))
+    df = p.DataFrame.from_dict(domain_dict, orient='index')
+    df.reset_index(inplace=True)
+    df.columns = ['domain','Count']
+    df = df.merge(domain_class)
+    df.columns = ['Domain', 'Count', 'Service']
+    df.sort_values(by='Count', inplace=True, ascending=False)
+    df.set_index('Domain', inplace=True)
+    # print(df)
+    print(df.to_latex())
 
 
 ############################################
@@ -209,7 +260,7 @@ def get_all_domains(path, app_name, sheet=None):
 
 def compare_ips_to_domains():
     cols = ['Package Name', 'Benign Domains', 'Benign IPs', 'Ad Domains', 'Ad IPs', 'Tracking Domains', 'Tracking IPs']
-    df = p.read_csv('./results/new/game_summary.csv', index_col=None, usecols=cols)
+    df = p.read_csv('./results/new/Pandas/game_summary.csv', index_col=None, usecols=cols)
 
     def count_domains(domain_string):
         if(p.isnull(domain_string)):
@@ -229,10 +280,6 @@ def compare_ips_to_domains():
         if(a and b and c and d and e and f):
             drop = True
         return drop
-    
-    def clean_package_name(package_name):
-        parts = package_name.split('.')
-        return parts[2]
 
     df['Benign Domain Count'] = list(map(lambda x: count_domains(x), df['Benign Domains']))
     df['Ad Domain Count'] = list(map(lambda x: count_domains(x), df['Ad Domains']))
@@ -255,33 +302,36 @@ def compare_ips_to_domains():
 
 def compare_confirmed_to_suspected():
     cols = ['Package Name', 'Suspected Ad IPs', 'Ad IPs', 'Suspected Tracking IPs', 'Tracking IPs']
-    df = p.read_csv('./results/new/game_summary.csv', index_col=None, usecols=cols)
-
-    def clean_package_name(package_name):
-        shortened = ""
-        parts = package_name.split('.')
-        if(parts[2] == 'apk'):
-            shortened = parts[1]
-        else:
-            shortened = parts[1] + "." + parts[2]
-        return shortened
+    renamed = ['HTTP Ad IPs', 'HTTPS Ad IPs', 'HTTP Tracking IPs', 'HTTPS Tracking IPs']
+    df = p.read_csv('./results/new/Pandas/game_summary.csv', index_col=None, usecols=cols)
 
     df['Package Name'] = list(map(lambda x: clean_package_name(x), df['Package Name']))
     df.set_index('Package Name', inplace=True)
     df = df[cols[1:]]
+    df.columns = renamed
 
     current_palette = sns.color_palette()
     fig, ax = plt.subplots(figsize=(11,7))
-    df[[cols[1], cols[3]]].plot.bar(ax=ax, stacked=True, position=1, width=0.4, color=current_palette[0:2])
-    df[[cols[2], cols[4]]].plot.bar(ax=ax, stacked=True, position=0, width=0.4, color=current_palette[2:4])
+    df[[renamed[0], renamed[2]]].plot.bar(ax=ax, stacked=True, position=1, width=0.4, color=current_palette[0:2])
+    df[[renamed[1], renamed[3]]].plot.bar(ax=ax, stacked=True, position=0, width=0.4, color=current_palette[2:4])
+    set_fonts()
+    plt.title("HTTP versus HTTPS Advertisement and Tracking IPs", **title_font)
+    plt.xlabel("Application")
+    plt.ylabel("Total Number of IPs")
 
     plt.savefig("./graphs/v2/suspected_vs_confirmed_ips.png")
     # plt.show()
 
-# ips_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
-# frames_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTPS", "io.voodoo.paper2.apk")
-# domains_over_time("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "HTTP", "io.voodoo.paper2.apk")
-# get_all_domains("./results/new/games/Pandas/io.voodoo.paper2.apk.xlsx", "io.voodoo.paper2.apk")
+
+# ips_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
+# ips_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
+# frames_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
+# frames_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
+# domains_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
+# domains_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
+https_vs_http("./results/new/Pandas/com.pinterest.apk.xlsx", "com.pinterest")
+
+# get_all_domains("./results/new/Pandas/com.pinterest.apk.xlsx", "com.pinterest")
 
 # compare_ips_to_domains()
 # compare_confirmed_to_suspected()
