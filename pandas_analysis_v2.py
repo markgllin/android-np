@@ -67,6 +67,7 @@ def get_all_dfs(dataset, column):
         both = dataset[column]['ads,tracking'].reset_index().rename(columns={
             column: "Both"})
         all_dfs.append(both)
+
     return all_dfs
 
 
@@ -136,16 +137,19 @@ def frames_over_time(path, sheet, app_name):
     df['Time'] = df["timestamp"].dt.strftime("%H:%M")
 
     def create_graph(dataset):
-        dataset = dataset.groupby(['service', 'Time'])['frame size'].sum()
-        dataset = dataset.to_frame()
         column = 'frame size'
+        dataset = dataset.groupby(['service', 'Time'])[column].sum()
+        dataset = dataset.to_frame()
 
         fig, ax = plt.subplots(figsize=(11, 7))
         all_dfs = get_all_dfs(dataset, column)
         cleaned = distribute_time(all_dfs)
+
         for frame in cleaned:
             type = frame[frame.columns[1]].name
             ax.plot(frame['Time'], frame[type], '-o')
+            print(type)
+            print(frame)
 
         ax.set_xticklabels(range(0,16))
         set_fonts()
@@ -169,7 +173,7 @@ def domains_over_time(path, sheet, app_name):
     df['Time'] = df["timestamp"].dt.strftime("%H:%M")
 
     def create_graph(dataset):
-        dataset = dataset.groupby(['service', 'Time'])['domain'].count()
+        dataset = dataset.groupby(['service', 'Time'])['domain'].nunique()
         dataset = dataset.to_frame()
         column = 'domain'
 
@@ -183,9 +187,9 @@ def domains_over_time(path, sheet, app_name):
 
         ax.set_xticklabels(range(0, 16))
         set_fonts()
-        plt.title("Total Domain Requests/Responses over "  + sheet, **title_font)
-        plt.xlabel("Time (in minutes)")
-        plt.ylabel("Total Number of Domains")
+        plt.title("Total Domain Connections over "  + sheet, **title_font)
+        plt.xlabel("Time (in minutes)", **axis_font)
+        plt.ylabel("Total Domains Connections", **axis_font)
         ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
         plt.legend(fontsize=12)
 
@@ -212,13 +216,14 @@ def https_vs_http(path, app_name):
     fig, ax = plt.subplots(figsize=(11, 7))
 
     both.plot(ax=ax, secondary_y=['HTTPS Frame Size'], style='-o')
-    ax.set_xticklabels(range(0, 16))
     plt.title("HTTP Traffic VS HTTPS Traffic over Time", **title_font)
     ax.set_xlabel("Time (in minutes)", **axis_font)
     ax.set_ylabel('Total Traffic over HTTP (in bytes)', **axis_font)
     ax.right_ax.set_ylabel('Total Traffic over HTTPS (in bytes)', **axis_font)
     ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
     ax.right_ax.yaxis.set_major_formatter(plt.FormatStrFormatter('%d'))
+    ax.set_xticklabels(range(0, 16))
+    ax.set_xticks(range(0, 16))
 
     lines = ax.get_lines() + ax.right_ax.get_lines()
     ax.legend(lines, [l.get_label() for l in lines], loc='upper right', fontsize=12)
@@ -226,6 +231,12 @@ def https_vs_http(path, app_name):
     plt.savefig("./graphs/v2/http_vs_https_(" + app_name + ").png")
     # plt.show()
 
+
+def benign_domains(path, app_name):
+    df = p.read_excel(path, index_col=None, sheet_name='HTTPS')
+    benign = df[df['service'] == 'benign']
+    benign = benign[benign.domain.notnull()]
+    print(benign)
 
 ############################################
 #               EITHER STUFF               #
@@ -323,15 +334,24 @@ def compare_confirmed_to_suspected():
     # plt.show()
 
 
-# ips_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
-# ips_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
-# frames_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
-# frames_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
-# domains_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTP", "com.pinterest")
-# domains_over_time("./results/new/Pandas/com.pinterest.apk.xlsx", "HTTPS", "com.pinterest")
-https_vs_http("./results/new/Pandas/com.pinterest.apk.xlsx", "com.pinterest")
+# ips_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+# ips_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTPS", "com.circleball.hoppingball")
+# frames_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+# frames_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTPS", "com.circleball.hoppingball")
+# domains_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+# https_vs_http("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "com.circleball.hoppingball")
 
-# get_all_domains("./results/new/Pandas/com.pinterest.apk.xlsx", "com.pinterest")
+# get_all_domains("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "com.circleball.hoppingball")
 
 # compare_ips_to_domains()
 # compare_confirmed_to_suspected()
+
+# benign_domains("./results/new/Pandas/io.voodoo.paper2.apk.xlsx", "io.voodoo.paper2")
+
+
+# ips_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+ips_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTPS", "com.circleball.hoppingball")
+# frames_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+frames_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTPS", "com.circleball.hoppingball")
+# domains_over_time("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "HTTP", "com.circleball.hoppingball")
+# https_vs_http("./results/new/Pandas/com.circleball.hoppingball.apk.xlsx", "com.circleball.hoppingball")
