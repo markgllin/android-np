@@ -149,7 +149,7 @@ def get_associated_services(packet_details):
     domain = ip
   else:
     for result in results:
-      domain = result[1]
+      domain += result[1] + ','
 
       if domain in adtelemetry:
         service.add('ad')
@@ -168,7 +168,7 @@ def get_associated_services(packet_details):
   else:
     str_service = 'benign'
 
-  packet_details[4] = domain
+  packet_details[4] = domain[:-1]
   packet_details.append(str_service)
   return packet_details
 
