@@ -16,12 +16,15 @@ sns.set_style("darkgrid")
 sns.set_context('talk')
 sns.set_palette("Set1")
 
+ALPHA = 0.7
+
 title_font = {'fontname': 'Arial', 'size': '20', 'color': 'black', 'weight': 'normal',
               'verticalalignment': 'bottom'}  # Bottom vertical alignment for more space
 axis_font = {'fontname': 'Arial', 'size': '16', 'color': 'black', 'weight': 'normal'}  # Bottom vertical alignment for more space
 label_font = {'fontname': 'Arial', 'size': '12', 'color': 'black', 'weight': 'normal'}
 
-all_apps = ["com.tubitv", "com.wayfair.wayfair", "io.voodoo.crowdcity", "com.sausageflip.game"]
+all_apps = ["com.tubitv", "com.wayfair.wayfair", "io.voodoo.crowdcity", "com.sausageflip.game", "com.pinterest"]
+# all_apps = ["io.voodoo.crowdcity"]
 no_http = ["com.sausageflip.game"]
 
 ############################################
@@ -63,24 +66,37 @@ def get_all_dfs(dataset, column):
         ads = dataset[column]['ad'].reset_index().rename(
             columns={column: "Advertisements"})
         all_dfs.append(ads)
+    if 'telemetry' in service_types:
+        telemetry = dataset[column]['telemetry'].reset_index().rename(columns={
+            column: "Tracking"})
+        all_dfs.append(telemetry)
+
     # if 'tracking' in service_types:
     #     tracking = dataset[column]['tracking'].reset_index().rename(columns={
     #         column: "Tracking"})
     #     all_dfs.append(tracking)
     if 'ad,tracking' in service_types:
         both = dataset[column]['ad,tracking'].reset_index().rename(columns={
-            column: "Ads/Tracking"})
+            column: "Both"})
         all_dfs.append(both)
-
     return all_dfs
 
 
-def set_fonts():
-    plt.xticks(**label_font)
-    plt.yticks(**label_font)
-    plt.title("", **title_font)
-    plt.xlabel("", **axis_font)
-    plt.ylabel("", **axis_font)
+def colour_lines(all_dfs):
+    colours = []
+    palette = sns.color_palette()
+    for df in all_dfs:
+        column = df.columns[1]
+        if(column == "Benign"):
+            colours.append(palette[2])
+        elif(column == "Advertisements"):
+            colours.append(palette[0])
+        elif(column == "Tracking"):
+            colours.append(palette[1])
+        else:
+            colours.append(palette[3])
+
+    return colours
 
 
 def clean_package_name(package_name):
@@ -92,7 +108,16 @@ def clean_package_name(package_name):
         else:
             shortened = parts[1] + "." + parts[2]
         return shortened
-            
+
+
+def get_graph_name(sheet, app_name, graph_name):
+    app_name = app_name.replace('.','-')
+    if(sheet != ""):
+        name = "./graphs/v3/" + app_name + "_" + graph_name + "(" + sheet + ").png"
+    else:
+        name = "./graphs/v3/" + app_name + "_" + graph_name + ".png"
+    return name
+
 
 ############################################
 #                HTTPS STUFF               #
@@ -118,9 +143,13 @@ def ips_over_time(path, sheet, app_name):
         service_types = list(dataset[column].index.levels[0])
         all_dfs = get_all_dfs(dataset, column)
         cleaned = distribute_time(all_dfs)
+        colours = colour_lines(cleaned)
+
+        i = 0
         for frame in cleaned:
-            _type = frame[frame.columns[1]].name
-            ax.plot(frame['Time'], frame[_type], '-o')
+            type = frame[frame.columns[1]].name
+            ax.plot(frame['Time'], frame[type], '-o', alpha=ALPHA, color=colours[i])
+            i += 1
 
         ax.set_xticklabels(range(0, 16))
  
@@ -133,7 +162,9 @@ def ips_over_time(path, sheet, app_name):
 
     create_graph(df, "src/dst")
     # plt.show()
-    plt.savefig("./graphs/v3/" + sheet + "_unique_ip_responses_(" + app_name + ").png")
+    plt.savefig(get_graph_name(sheet, app_name, "unique_ip_responses"))
+
+    # get_graph_name(sheet, app_name, graph_name)
 
 
 def frames_over_time(path, sheet, app_name):
@@ -149,10 +180,13 @@ def frames_over_time(path, sheet, app_name):
         fig, ax = plt.subplots(figsize=(11, 7))
         all_dfs = get_all_dfs(dataset, column)
         cleaned = distribute_time(all_dfs)
+        colours = colour_lines(cleaned)
 
+        i = 0
         for frame in cleaned:
             type = frame[frame.columns[1]].name
-            ax.plot(frame['Time'], frame[type], '-o')
+            ax.plot(frame['Time'], frame[type], '-o', alpha=ALPHA, color=colours[i])
+            i += 1
 
         ax.set_xticklabels(range(0,16))
 
@@ -163,7 +197,8 @@ def frames_over_time(path, sheet, app_name):
         plt.legend(fontsize=12)
 
     create_graph(df)
-    plt.savefig("./graphs/v3/" + sheet + "_traffic_(" + app_name + ").png")
+    # plt.savefig("./graphs/v3/" + sheet + "_traffic_(" + app_name + ").png")
+    plt.savefig(get_graph_name(sheet, app_name, "traffic"))
 
 
 ############################################
@@ -184,9 +219,13 @@ def domains_over_time(path, sheet, app_name):
         service_types = list(dataset[column].index.levels[0])
         all_dfs = get_all_dfs(dataset, column)
         cleaned = distribute_time(all_dfs)
+        colours = colour_lines(cleaned)
+
+        i = 0
         for frame in cleaned:
             type = frame[frame.columns[1]].name
-            ax.plot(frame['Time'], frame[type], '-o')
+            ax.plot(frame['Time'], frame[type], '-o', alpha=ALPHA, color=colours[i])
+            i += 1
 
         ax.set_xticklabels(range(0, 16))
 
@@ -197,7 +236,8 @@ def domains_over_time(path, sheet, app_name):
         plt.legend(fontsize=12)
 
     create_graph(df)
-    plt.savefig("./graphs/v3/" + sheet + "_domain_number_(" + app_name + ").png")
+    # plt.savefig("./graphs/v3/" + sheet + "_domain_number_(" + app_name + ").png")
+    plt.savefig(get_graph_name(sheet, app_name, "domain_number"))
 
 
 def https_vs_http(path, app_name):
@@ -218,7 +258,7 @@ def https_vs_http(path, app_name):
 
     fig, ax = plt.subplots(figsize=(11, 7))
 
-    both.plot(ax=ax, secondary_y=['HTTPS Frame Size'], style='-o')
+    both.plot(ax=ax, secondary_y=['HTTPS Frame Size'], style='-o', alpha=ALPHA)
     plt.title("HTTP Traffic VS HTTPS Traffic over Time")
     ax.set_xlabel("Time (in minutes)")
     ax.set_ylabel('Total Traffic over HTTP (in bytes)')
@@ -231,7 +271,8 @@ def https_vs_http(path, app_name):
     lines = ax.get_lines() + ax.right_ax.get_lines()
     ax.legend(lines, [l.get_label() for l in lines], loc='upper right', fontsize=12)
     
-    plt.savefig("./graphs/v3/http_vs_https_(" + app_name + ").png")
+    # plt.savefig("./graphs/v3/http_vs_https_(" + app_name + ").png")
+    plt.savefig(get_graph_name("", app_name, "http_vs_https"))
     # plt.show()
 
 
@@ -247,8 +288,14 @@ def benign_domains(path, app_name):
 
 def get_all_domains(path, app_name):
     df = p.read_excel(path, index_col=None, sheet_name='HTTP')
-    all_domains = list(df['domain'].dropna())
-    domain_class = df[['domain', 'service']].drop_duplicates()
+    df2 = p.read_excel(path, index_col=None, sheet_name='HTTPS')
+
+    all_domains = list(df['domain'].dropna()) + list(df2['domain'].dropna())
+
+    domain_class1 = df[['domain', 'service']]
+    domain_class2 = df2[['domain', 'service']]
+    domain_class = (domain_class1.append(domain_class2)).drop_duplicates().reset_index()
+    domain_class.drop(['index'], axis=1, inplace=True)
 
     domain_dict = {}
     for domain in all_domains:
@@ -264,9 +311,26 @@ def get_all_domains(path, app_name):
     df.columns = ['Domain', 'Count', 'Service']
     df.sort_values(by='Count', inplace=True, ascending=False)
     df.set_index('Domain', inplace=True)
-    # print(df)
-    print(df.to_latex())
+    # print(df.head(10))
+    print(df.head(10).to_latex())
 
+
+def sum_domain(path, app_name, domain):
+    df_http = p.read_excel(path, index_col=None, sheet_name="HTTP")
+    df_https = p.read_excel(path, index_col=None, sheet_name="HTTPS")
+    both = df_http.append(df_https)
+    domain_df = both[both['domain'] == domain]
+    print(sum(domain_df['frame size']))
+
+def non_benign_domains(path, app_name):
+    df_http = p.read_excel(path, index_col=None, sheet_name="HTTP")
+    df_https = p.read_excel(path, index_col=None, sheet_name="HTTPS")
+    both = df_http.append(df_https)
+    both.drop((both[both['service'] == 'benign'].index), inplace=True)
+
+    both = both.groupby('domain')['frame size'].sum()
+    both.sort_values(inplace=True, ascending=False)
+    print(both.head(10))
 
 ############################################
 #              SUMMARY STUFF               #
@@ -337,21 +401,26 @@ def compare_confirmed_to_suspected():
     # plt.show()
 
 
-for app in all_apps:
-    print(app)
-    ips_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
-    frames_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
-    domains_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
-    https_vs_http("./make_it_stop/Pandas/" + app + ".apk.xlsx", app)
+# for app in all_apps:
+#     print(app)
+#     ips_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
+#     frames_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
+#     domains_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTPS", app)
+#     https_vs_http("./make_it_stop/Pandas/" + app + ".apk.xlsx", app)
 
-    if(app not in no_http):
-        ips_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
-        frames_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
-        domains_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
+#     if(app not in no_http):
+#         ips_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
+#         frames_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
+#         domains_over_time("./make_it_stop/Pandas/" + app + ".apk.xlsx", "HTTP", app)
     
-    plt.close('all')
+#     plt.close('all')
 
-# get_all_domains("./make_it_stop/Pandas/" + app + ".apk.xlsx", app)
+# sum_domain("./make_it_stop/Pandas/" + all_apps[4] + ".apk.xlsx", all_apps[4],
+#            "ct.pinterest.com")
+
+non_benign_domains("./make_it_stop/Pandas/" + all_apps[4] + ".apk.xlsx", all_apps[4])
+
+# get_all_domains("./make_it_stop/Pandas/" +  all_apps[4] + ".apk.xlsx",  all_apps[4])
 
 # compare_ips_to_domains()
 # compare_confirmed_to_suspected()
